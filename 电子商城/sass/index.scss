@@ -1,0 +1,231 @@
+@charset "UTF-8";
+@import "basic";
+$header_height:70px;
+/*网站主体*/
+#page_body{
+  width:100%;
+  min-height: 600px;
+  color:#4c4c4c;
+  /*网站中间部分*/
+  #pb_middle{
+    width:  580px;
+    min-height: 600px;
+    @extend .fl;
+    margin: 2px 2px 5px 5px;
+    /*轮番图样式*/
+    #banner{
+      position: relative;
+      width: 100%;
+      height: 140px;
+      overflow: hidden;
+      margin-bottom: 7px;
+      #banner_bg{
+        width:580px;
+        height: 20px;
+        position: absolute;
+        bottom: 0;
+        background: #F5F5F5;
+        z-index: 1000;
+        cursor:pointer;
+      }
+      #banner_info{
+        position: absolute;
+        bottom: -5px;
+        left: 5px;
+        height: 22px;
+        color: #000;
+        z-index: 1001;
+        cursor: pointer;
+      }
+      ul{
+        position: absolute;
+        z-index: 1002;
+        right: 5px;
+        bottom: 3px;
+        list-style: none;
+      }
+      li{
+        padding: 0 6px;
+        @extend .fl;
+        display: block;
+        color: #000;
+        background: #ccc;
+        cursor: pointer;
+        margin-right: 2px;
+      }
+      li.on{
+        background: #900;
+      }
+      #banner_list a{
+        position: absolute;
+      }
+    }
+    #pm_tjsp{
+      width: 100%;
+      height: 371px;
+    }
+    .pm_rmsp{
+      width: 100%;
+      height: 206px;
+    }
+    /*推荐,热卖,特价,图片,支付方式等样式*/
+    .pm_h3{
+      width: 100%;
+      height:31px;
+      line-height: 31px;
+      background: url("../images/img/ca_1.gif");
+      color:#fff;
+      text-indent: 20px;
+      img{
+        width: 29px;
+        height: 7px;
+        @extend .fr;
+        margin: 12px;
+      }
+    }
+    .pm_div{
+      padding: 10px;
+      img{
+        width: 100%;
+        height: 50%;
+      }
+      p{
+        text-align: center;
+        line-height: 22px;
+        margin-top: 12px;
+        overflow: hidden;
+        white-space: nowrap;
+        a{
+          @include a;
+        }
+      }
+    }
+    .pm_upList{
+      margin-right: 10px;
+      margin-bottom: 10px;
+      width: 104px;
+      height: 155px;
+      @extend .fl;
+    }
+    .pm_downList{
+      margin-right: 10px;
+      width: 104px;
+      height: 155px;
+      @extend .fl;
+    }
+    .pm_ud{
+      margin-right: 0;
+    }
+    #pm_img{
+      width: 100%;
+      height: 90px;
+      background: url("../images/Wrzcnet/11.jpg");
+      margin-bottom: 10px;
+    }
+    #pay{
+      width: 100%;
+      height: 60px;
+      background: #F5F5F5;
+      p{
+        text-indent: 5px;
+      }
+    }
+  }
+  /*网站右边部分*/
+  #pb_right{
+    margin-top: 2px;
+    width:195px;
+    min-height: 600px;
+    @extend .fl;
+    div{
+      margin-bottom: 5px;
+    }
+    #pr_xw{
+      li{
+        list-style: none;
+        height: 22px;
+        a{
+          @include a;
+        }
+      }
+    }
+    #pr_fw{
+      p{
+        height: 22px;
+        line-height: 22px;
+        display: inline-block;
+        a{
+          @include a;
+        }
+      }
+    }
+    #pr_tp{
+      width: 195px;
+      height: 166px;
+      background: url("../images/Wrzcnet/right_01.jpg");
+    }
+    /*分类推荐商品*/
+    #pr_sp{
+      p{
+        line-height: 19px;
+        a{
+          @include a;
+        }
+      }
+      #pr_p2{
+        border-bottom: 1px solid #ccc;
+        width: 173px;
+        height: 85px;
+        #pr_img2{
+          @extend .fl;
+          width: 50px;
+          height: 37px;
+          margin-top: 20px;
+        }
+      }
+      #pr_p4{
+        border-bottom: 1px solid #ccc;
+        width: 173px;
+        height: 65px;
+        #pr_img4{
+          @extend .fl;
+          width: 50px;
+          height: 37px;
+          margin-top: 10px;
+        }
+      }
+      #pr_p5{
+        border-bottom: 1px solid #ccc;
+        width: 173px;
+        height: 85px;
+        #pr_img5{
+          @extend .fl;
+          width: 50px;
+          height: 37px;
+          margin-top: 20px;
+        }
+      }
+      #pr_p6{
+        border-bottom: 1px solid #ccc;
+        width: 173px;
+        height: 85px;
+        #pr_img6{
+          @extend .fl;
+          width: 50px;
+          height: 37px;
+          margin-top: 20px;
+        }
+      }
+      #pr_p7{
+        width: 173px;
+        height: 65px;
+        #pr_img7{
+          @extend .fl;
+          width: 50px;
+          height: 37px;
+          margin-top: 10px;
+        }
+      }
+    }/*分类推荐商品*/
+  }/*网站右边部分*/
+}/*网站主体*/

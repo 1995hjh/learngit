@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电子商城项目首页</title>
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+<div class="container">
+    <!--网站头部-->
+    <div class="page_top">
+        <div id="pt_img"><img src="../images/logo.gif" alt="w网页logo"></div>
+        <div id="pt_middle">
+            您好,欢迎来到麦子商城!想继续购物?[<a href="login.html">请登录</a>],新用户?[<a href="register.html">免费注册</a>]
+        </div>
+        <div id="pt_right">
+            <ul class="pt_list">
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">客户反馈</a></li>
+                <li><a href="#">网站地图</a></li>
+                <li class="sc"><a href="#">加入收藏</a></li>
+                <li class="sc"><span id="Clock"></span></li>
+            </ul>
+            <div id="pt_mar">
+                <marquee height="35px" direction="up" scrollamount="3">
+                    <ul>
+                        <li><a href="#">1.最新公告,明天有秒杀活动!大家都来看看呢!机会难得,机不可失</a></li>
+                        <li><a href="#">2.明天有秒杀活动!</a></li>
+                    </ul>
+                </marquee>
+            </div>
+        </div>
+    </div>
+    <!--网站导航-->
+    <div class="nav">
+        <div id="nav_top">
+            <ul>
+                <li><a href="index.html">网站首页</a></li>
+                <li><a href="#">分类导航</a></li>
+                <li><a href="#">品牌导航</a></li>
+                <li><a href="shopping.html">我的购物</a></li>
+                <li><a href="productList.html">产品列表</a></li>
+                <li><a href="quotation.html">报价单</a></li>
+                <li><a href="pay.html">发货单</a></li>
+            </ul>
+        </div>
+        <div id="nav_bottom">
+            <div id="p_type">
+                <span>商品搜索:</span>
+                <select name="alltype">
+                    <option value="">所有分类</option>
+                    <option value="">最新商品</option>
+                    <option value="">热卖商品</option>
+                </select>
+            </div>
+            <div id="p_search">
+                <input type="text">
+                <input type="button" value="搜索">
+            </div>
+            <div id="p_text">
+                高级/组合搜索
+            </div>
+            <div id="p_image">
+                <div id="gwc"><a href="#">购物车暂时为空</a></div>
+                <div id="js"><a href="#">去结算</a></div>
+                <div id="yh"><a href="shopping.html" target="_blank">用户中心</a></div>
+            </div>
+        </div>
+    </div>
+    <!--网站中间主体部分-->
+    <div id="page_body">
+        <!--网站左边部分-->
+        <div class="pb_left">
+            <div id="pl_user">
+                <h3 class="slide_h3">用户中心</h3>
+
+                <div class="border">
+                    <ul>
+                        <li><img src="../images/user/1.gif"/>&nbsp;<a href="#">注册&nbsp;/&nbsp;登录</a></li>
+                        <li><img src="../images/user/8.gif"/>&nbsp;<a href="#">购物车(0)</a></li>
+                        <li><img src="../images/user/10.gif"/>&nbsp;<a href="#">对比框(0)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="pl_pro">
+                <h3 class="slide_h3">商品分类</h3>
+
+                <div class="border">
+                    <dl>
+                        <dt><img src="../images/img/dot.gif"/> <a href="#">家用电器</a></dt>
+                        <dd><a href="#">大 家 电</a>&nbsp;|&nbsp;<a href="#">厨房电器</a></dd>
+                        <dd><a href="#">汽车用品</a>&nbsp;|&nbsp;<a href="#">个人护理</a></dd>
+                        <dd><a href="#">生活电器</a>&nbsp;|&nbsp;<a href="#">其他家电</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="../images/img/dot.gif"/> <a href="#">手机数码</a></dt>
+                        <dd><a href="#">数码相机</a>&nbsp;|&nbsp;<a href="#">手机通讯</a></dd>
+                        <dd><a href="#">时尚影音</a>&nbsp;|&nbsp;<a href="#">数码配件</a></dd>
+                        <dd><a href="#">数码影像</a>&nbsp;|&nbsp;<a href="#">手机配件</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="../images/img/dot.gif"/> <a href="#">电脑产品</a></dt>
+                        <dd><a href="#">笔 记 本</a>&nbsp;|&nbsp;<a href="#">办公耗材</a></dd>
+                        <dd><a href="#">电脑软件</a>&nbsp;|&nbsp;<a href="#">网络产品</a></dd>
+                        <dd><a href="#">办公设备</a>&nbsp;|&nbsp;<a href="#">电脑整机</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="../images/img/dot.gif"/> <a href="#">日用百货</a></dt>
+                        <dd><a href="#">玩具乐器</a>&nbsp;|&nbsp;<a href="#">个户化妆</a></dd>
+                        <dd><a href="#">礼品箱包</a>&nbsp;|&nbsp;<a href="#">钟表首饰</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="../images/img/dot.gif"/> <a href="#">服装鞋帽</a></dt>
+                        <dd><a href="#">运 动 鞋</a>&nbsp;|&nbsp;<a href="#">女士服装</a></dd>
+                        <dd><a href="#">男士服装</a>&nbsp;|&nbsp;<a href="#">运 动 装</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="../images/img/dot.gif"/> <a href="#">运动健康</a></dt>
+                        <dd><a href="#">户外运动</a>&nbsp;|&nbsp;<a href="#">运动器材</a></dd>
+                        <dd><a href="#">养生器械</a>&nbsp;|&nbsp;<a href="#">健康食品</a></dd>
+                    </dl>
+                    <p class="ti65"><a href="#">所有分类>></a></p>
+                </div>
+            </div>
+            <div id="pl_xylp"></div>
+            <div id="pl_tjpp">
+                <h3 class="slide_h3">推荐品牌</h3>
+
+                <div class="border">
+                    <a href="#"><img src="../images/tjpp_01.jpg" alt="图片1"></a>
+                    <a href="#"><img src="../images/tjpp_02.jpg" alt="图片2"></a>
+                    <a href="#"><img src="../images/tjpp_03.jpg" alt="图片3"></a>
+                    <a href="#"><img src="../images/tjpp_04.jpg" alt="图片4"></a>
+                    <a href="#"><img src="../images/tjpp_05.jpg" alt="图片5"></a>
+                    <a href="#"><img src="../images/tjpp_06.jpg" alt="图片6"></a>
+
+                    <p class="ti65"><a href="#">所有品牌>></a></p>
+                </div>
+            </div>
+            <div id="pl_jdxy"></div>
+            <div id="pl_hzhp">
+                <h3 class="slide_h3">合作伙伴</h3>
+
+                <div class="border">
+                    <p><a href="#">网软志成人才</a></p>
+
+                    <p><a href="#">网软志成商城</a></p>
+                </div>
+            </div>
+        </div>
+        <!--网站中间部分-->
+        <div id="pb_middle">
+            <!--轮番图效果-->
+            <div id="banner">
+                <!--标题背景-->
+                <div id="banner_bg"></div>
+                <!--标题-->
+                <div id="banner_info"></div>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                </ul>
+                <div id="banner_list">
+                    <a href="#"><img src="../images/Wrzcnet/1.jpg" alt="超值奖品送回家"></a>
+                    <a href="#"><img src="../images/Wrzcnet/2.jpg" alt="新版上市啦"></a>
+                    <a href="#"><img src="../images/Wrzcnet/3.jpg" alt="仿京东商城系统正式版"></a>
+                    <a href="#"><img src="../images/Wrzcnet/4.jpg" alt="网软志成仿京东商城超级功能!"></a>
+                    <a href="#"><img src="../images/Wrzcnet/5.jpg" alt="网软志成仿京东商城"></a>
+                    <a href="#"><img src="../images/Wrzcnet/6.jpg" alt="积分抢钻大行动"></a>
+                </div>
+            </div>
+            <!--推荐商品-->
+            <div id="pm_tjsp">
+                <h3 class="pm_h3">
+                    推荐商品
+                    <a href="#"><img src="../images/img/more.gif" alt="more"></a>
+                </h3>
+
+                <div class="pm_div">
+                    <div class="pm_upList">
+                        <a href="productDetail.html" target="_blank"><img src="../images/imgs/pm_body_03.jpg" alt="3"></a>
+
+                        <p><a href="productDetail.html" target="_blank">霍尼韦尔<br/>
+                            (Honerwell)<br/>
+                            <span class="pr_jg">￥7599.00元</span></a></p>
+                    </div>
+                    <div class="pm_upList">
+                        <a href="#"><img src="../images/imgs/pm_body_05.jpg" alt="5"></a>
+
+                        <p><a href="#">戴尔(Dell)<br/>
+                            I560SR-128 商用<br/>
+                            <span class="pr_jg">￥3999.00元</span></a></p>
+                    </div>
+                    <div class="pm_upList">
+                        <a href="#"><img src="../images/imgs/pm_body_07.jpg" alt="7"></a>
+
+                        <p><a href="#">爱普生(Epson)<br/>
+                            EPL-N2500 A3黑白<br/>
+                            <span class="pr_jg">￥7599.00元</span></a></p>
+                    </div>
+                    <div class="pm_upList">
+                        <a href="#"><img src="../images/imgs/pm_body_09.jpg" alt="9"></a>
+
+                        <p><a href="#">美的(midea)电脑<br/>
+                            版压力锅PCS507<br/>
+                            <span class="pr_jg">￥389.00元</span></a></p>
+                    </div>
+                    <div class="pm_upList pm_ud">
+                        <a href="#"><img src="../images/imgs/pm_body_11.jpg" alt="11"></a>
+
+                        <p><a href="#">创维(Skyworth)<br/>
+                            32英寸液晶电视<br/>
+                            <span class="pr_jg">￥2599.00元</span></a></p>
+                    </div>
+                    <div class="pm_downList">
+                        <a href="#"><img src="../images/imgs/pm_body_18.jpg" alt="18"></a>
+
+                        <p><a href="#">索尼爱立信 Z610c<br/>
+                            超经典镜面<br/>
+                            <span class="pr_jg">￥1359.00元</span></a></p>
+                    </div>
+                    <div class="pm_downList">
+                        <a href="#"><img src="../images/imgs/pm_body_19.jpg" alt="19"></a>
+
+                        <p><a href="#">HR笔记本 dv2-<br/>
+                            1201AX特价<br/>
+                            <span class="pr_jg">￥4395.00元</span></a></p>
+                    </div>
+                    <div class="pm_downList">
+                        <a href="#"><img src="../images/imgs/pm_body_20.jpg" alt="20"></a>
+
+                        <p><a href="#">佳能 A1100IS<br/>
+                            1200万像素<br/>
+                            <span class="pr_jg">￥4395.00元</span></a></p>
+                    </div>
+                    <div class="pm_downList">
+                        <a href="#"><img src="../images/imgs/pm_body_21.jpg" alt="21"></a>
+
+                        <p><a href="#">佳能 A480<br/>
+                            1000万像素2.5屏<br/>
+                            <span class="pr_jg">￥5389.00元</span></a></p>
+                    </div>
+                    <div class="pm_downList pm_ud">
+                        <a href="#"><img src="../images/imgs/pm_body_22.jpg" alt="22"></a>
+
+                        <p><a href="#">索爱 S500C<br/>
+                            滑盖全国联保<br/>
+                            <span class="pr_jg">￥1395.00元</span></a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="pm_rmsp">
+                <!--热卖商品-->
+                <h3 class="pm_h3">
+                    热卖商品
+                    <a href="#"><img src="../images/img/more.gif" alt="more"></a>
+                </h3>
+
+                <div class="pm_div">
+                    <div class="pm_upList">
+                        <a href="#"><img src="../images/imgs/pm_body_05.jpg" alt="5"></a>
+
+                        <p><a href="#">戴尔(Dell)<br/>
+                            I560SR-128 商用<br/>
+                            <span class="pr_jg">￥3999.00元</span></a></p>
+                    </div>
+                    <div class="pm_upList">
+                        <a href="#"><img src="../images/imgs/pm_body_07.jpg" alt="7"></a>
+
+                        <p><a href="#">爱普生(Epson)<br/>
+                            EPL-N2500 A3黑白<br/>
+                            <span class="pr_jg">￥7599.00元</span></a></p>
+                    </div>
+                    <div class="pm_upList">
+                        <a href="#"><img src="../images/imgs/pm_body_09.jpg" alt="9"></a>
+
+                        <p><a href="#">美的(midea)电脑<br/>
+                            版压力锅PCS507<br/>
+                            <span class="pr_jg">￥389.00元</span></a></p>
+                    </div>
+                    <div class="pm_upList">
+                        <a href="#"><img src="../images/imgs/pm_body_03.jpg" alt="3"></a>
+
+                        <p><a href="#">霍尼韦尔<br/>
+                            (Honerwell)<br/>
+                            <span class="pr_jg">￥7599.00元</span></a></p>
+                    </div>
+                    <div class="pm_upList pm_ud">
+                        <a href="#"><img src="../images/imgs/pm_body_11.jpg" alt="11"></a>
+
+                        <p><a href="#">创维(Skyworth)<br/>
+                            32英寸液晶电视<br/>
+                            <span class="pr_jg">￥2599.00元</span></a></p>
+                    </div>
+                </div>
+            </div>
+            <!--特价商品-->
+            <div class="pm_rmsp">
+                <h3 class="pm_h3">
+                    特价商品
+                    <a href="#"><img src="../images/img/more.gif" alt="more"></a>
+                </h3>
+
+                <div class="pm_div">
+                    <div class="pm_downList">
+                        <a href="#"><img src="../images/imgs/pm_body_18.jpg" alt="18"></a>
+
+                        <p><a href="#">索尼爱立信 Z610c<br/>
+                            超经典镜面<br/>
+                            <span class="pr_jg">￥1359.00元</span></a></p>
+                    </div>
+                    <div class="pm_downList">
+                        <a href="#"><img src="../images/imgs/pm_body_19.jpg" alt="19"></a>
+
+                        <p><a href="#">HR笔记本 dv2-<br/>
+                            1201AX特价<br/>
+                            <span class="pr_jg">￥4395.00元</span></a></p>
+                    </div>
+                    <div class="pm_downList">
+                        <a href="#"><img src="../images/imgs/pm_body_20.jpg" alt="20"></a>
+
+                        <p><a href="#">佳能 A1100IS<br/>
+                            1200万像素<br/>
+                            <span class="pr_jg">￥4395.00元</span></a></p>
+                    </div>
+                    <div class="pm_downList">
+                        <a href="#"><img src="../images/imgs/pm_body_21.jpg" alt="21"></a>
+
+                        <p><a href="#">佳能 A480<br/>
+                            1000万像素2.5屏<br/>
+                            <span class="pr_jg">￥5389.00元</span></a></p>
+                    </div>
+                    <div class="pm_downList pm_ud">
+                        <a href="#"><img src="../images/imgs/pm_body_22.jpg" alt="22"></a>
+
+                        <p><a href="#">索爱 S500C<br/>
+                            滑盖全国联保<br/>
+                            <span class="pr_jg">￥1395.00元</span></a></p>
+                    </div>
+                </div>
+            </div>
+            <!--图片-->
+            <div id="pm_img"></div>
+            <!--最新商品-->
+            <div class="pm_rmsp">
+                <!--最新商品-->
+                <h3 class="pm_h3">
+                    最新商品
+                    <a href="#"><img src="../images/img/more.gif" alt="more"></a>
+                </h3>
+
+                <div class="pm_div">
+                    <div class="pm_upList">
+                        <a href="#"><img src="../images/imgs/pm_body_03.jpg" alt="3"></a>
+
+                        <p><a href="#">霍尼韦尔<br/>
+                            (Honerwell)<br/>
+                            <span class="pr_jg">￥7599.00元</span></a></p>
+                    </div>
+                    <div class="pm_upList">
+                        <a href="#"><img src="../images/imgs/pm_body_05.jpg" alt="5"></a>
+
+                        <p><a href="#">戴尔(Dell)<br/>
+                            I560SR-128 商用<br/>
+                            <span class="pr_jg">￥3999.00元</span></a></p>
+                    </div>
+                    <div class="pm_upList">
+                        <a href="#"><img src="../images/imgs/pm_body_07.jpg" alt="7"></a>
+
+                        <p><a href="#">爱普生(Epson)<br/>
+                            EPL-N2500 A3黑白<br/>
+                            <span class="pr_jg">￥7599.00元</span></a></p>
+                    </div>
+                    <div class="pm_upList">
+                        <a href="#"><img src="../images/imgs/pm_body_09.jpg" alt="9"></a>
+
+                        <p><a href="#">美的(midea)电脑<br/>
+                            版压力锅PCS507<br/>
+                            <span class="pr_jg">￥389.00元</span></a></p>
+                    </div>
+                    <div class="pm_upList pm_ud">
+                        <a href="#"><img src="../images/imgs/pm_body_11.jpg" alt="11"></a>
+
+                        <p><a href="#">创维(Skyworth)<br/>
+                            32英寸液晶电视<br/>
+                            <span class="pr_jg">￥2599.00元</span></a></p>
+                    </div>
+                </div>
+            </div>
+            <!--支付方式-->
+            <div id="pay">
+                <p>本站支持以下支付方式:</p>
+                <a href="#"><img src="../images/pay/logo_tenpay.gif" alt="cft"></a>
+                <a href="#"><img src="../images/pay/logo_alipay.gif" alt="zfb"></a>
+                <a href="#"><img src="../images/pay/logo_ebank.gif" alt="wyzx"></a>
+                <a href="#"><img src="../images/pay/logo_paypal.gif" alt="pay"></a>
+                <a href="#"><img src="../images/pay/logo_99bill.jpg" alt="kq"></a>
+                <a href="#"><img src="../images/pay/logo_cncard.gif" alt="zfw"></a>
+            </div>
+        </div>
+        <!--网站右边部分-->
+        <div id="pb_right">
+            <div id="pr_xw">
+                <h3 class="slide_h3">网站新闻</h3>
+
+                <div class="border">
+                    <ul>
+                        <li><img src="../images/img/dot2.gif" alt=""> <a href="#">京东商城网站模板英文版</a></li>
+                        <li><img src="../images/img/dot2.gif" alt=""> <a href="#">京东商城系统英文版</a></li>
+                        <li><img src="../images/img/dot2.gif" alt=""> <a href="#">b2商城系统</a></li>
+                        <li><img src="../images/img/dot2.gif" alt=""> <a href="#">京东商城系统功能</a></li>
+                        <li><img src="../images/img/dot2.gif" alt=""> <a href="#">shop商城系统</a></li>
+                        <li><img src="../images/img/dot2.gif" alt=""> <a href="#">独立商城系统</a></li>
+                        <li><img src="../images/img/dot2.gif" alt=""> <a href="#">网购商城系统</a></li>
+                        <li><img src="../images/img/dot2.gif" alt=""> <a href="#">php商城系统</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="pr_fw">
+                <h3 class="slide_h3">客户服务</h3>
+
+                <div class="border">
+                    <p>电话: 020-34506590</p>
+
+                    <p>邮箱: 1634094825@qq.com</p>
+
+                    <p>传真: 020-34506590</p>
+
+                    <p><img src="../images/qq.jpg" alt="qq图标"> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;in=123456789&amp;site=www.maiziedu.com&amp;menu=yes">售前客服</a>&nbsp;<img src="../images/qq.jpg"
+                                                                                              alt="qq图标"> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;in=123456789&amp;site=www.maiziedu.com&amp;menu=yes">售后客服</a>
+                    </p>
+
+                    <p><img src="../images/ww.gif" alt="微信图标"> <a target="_blank" href="http://www.xfbdw.com/wangwang/">十佳掌柜</a>&nbsp;<img src="../images/ww.gif"
+                                                                                              alt="微信图标"> <a target="_blank" href="http://www.xfbdw.com/wangwang/">网软志成</a>
+                    </p>
+
+                    <p><img src="../images/msn.gif" alt="msn"> <a href="#">MSN客服一</a>&nbsp;<img src="../images/msn.gif"
+                                                                                                alt="msn"> <a href="#">MSN客服二</a>
+                    </p>
+
+                    <p><img src="../images/skype.gif" alt="skype"> <a href="#">网软志成</a></p>
+                </div>
+            </div>
+            <div id="pr_sp">
+                <h3 class="slide_h3">分类推荐商品</h3>
+
+                <div class="border">
+                    <div class="pr_p1">
+                        <div class="pr_img1"><a href=""><img src="../images/imgs/pr_sp_1_03.jpg" alt=""></a></div>
+                        <div class="pr_inf">
+                            <p><a href="#">戴尔(Dell)<br/>
+                                I560SR-128 商用台式电脑 (双核E5400 2G内存 500G硬盘 512M独显 DVD WIN7)<br/>
+                                <span class="pr_jg">￥3999.00元</span></a></p>
+                        </div>
+                    </div>
+                    <div id="pr_p2">
+                        <div id="pr_img2"><a href=""><img src="../images/imgs/pr_sp_1_06.jpg" alt=""></a></div>
+                        <div class="pr_inf">
+                            <p><a href="#">爱普生(Epson)<br/>
+                                EPL-N2500 A3黑白激光打印机<br/>
+                                <span class="pr_jg">￥7599.00元</span></a></p>
+                        </div>
+                    </div>
+                    <div class="pr_p3">
+                        <div class="pr_img3"><a href=""><img src="../images/imgs/pr_sp_1_08.jpg" alt=""></a></div>
+                        <div class="pr_inf">
+                            <p><a href="#">创维(Skyworth)<br/>
+                                32英寸液晶电视 32L05HR (内置底座)<br/>
+                                <span class="pr_jg">￥2599.00元</span></a></p>
+                        </div>
+                    </div>
+                    <div id="pr_p4">
+                        <div id="pr_img4"><a href=""><img src="../images/imgs/pr_sp_1_10.jpg" alt=""></a></div>
+                        <div class="pr_inf">
+                            <p><a href="#">索尼爱立信 Z610c<br/>
+                                超经典镜面<br/>
+                                <span class="pr_jg">￥1359.00元</span></a></p>
+                        </div>
+                    </div>
+                    <div id="pr_p5">
+                        <div id="pr_img5"><a href=""><img src="../images/imgs/pr_sp_1_12.jpg" alt=""></a></div>
+                        <div class="pr_inf">
+                            <p><a href="#">佳能 A1100IS<br/>
+                                数码相机 1200万像素<br/>
+                                <span class="pr_jg">￥4395.00元</span></a></p>
+                        </div>
+                    </div>
+                    <div id="pr_p6">
+                        <div id="pr_img6"><a href=""><img src="../images/imgs/pr_sp_1_14.jpg" alt=""></a></div>
+                        <div class="pr_inf">
+                            <p><a href="#">佳能 A480<br/>
+                                数码相机 1000万像素2.5屏 新款<br/>
+                                <span class="pr_jg">￥5389.00元</span></a></p>
+                        </div>
+                    </div>
+                    <div id="pr_p7">
+                        <div id="pr_img7"><a href=""><img src="../images/imgs/pr_sp_1_16.jpg" alt=""></a></div>
+                        <div class="pr_inf">
+                            <p><a href="#">索爱 S500C<br/>
+                                滑盖全国联保 带发票<br/>
+                                <span class="pr_jg">￥1395.00元</span></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pr_tp"></div>
+        </div>
+    </div>
+    <!--网站底部-->
+    <div class="page_footer">
+        <div id="pf_f">
+            <dl>
+                <dt>关于我们</dt>
+                <dd><img src="../images/img/dot.gif"> <a href="#">发展历程</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">联系方式</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">公司介绍</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">企业文化</a></dd>
+            </dl>
+            <dl>
+                <dt>付款方式</dt>
+                <dd><img src="../images/img/dot.gif"> <a href="#">银行付款</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">在线支付</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">银行付款</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">公司转账</a></dd>
+            </dl>
+            <dl>
+                <dt>送货方式</dt>
+                <dd><img src="../images/img/dot.gif"> <a href="#">上门自取</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">EMS快递</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">快递发货</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">平邮发货</a></dd>
+            </dl>
+            <dl>
+                <dt>售后服务</dt>
+                <dd><img src="../images/img/dot.gif"> <a href="#">质保承诺</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">退换货政策</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">价格保护</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">返修申请</a></dd>
+            </dl>
+            <dl>
+                <dt>购物帮助</dt>
+                <dd><img src="../images/img/dot.gif"> <a href="#">用户等级</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">积分获得与使用</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">购物流程</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">常见问题</a></dd>
+            </dl>
+        </div>
+        <div id="pf_m">
+            <p class="pf_gray"><a href="#">淘宝店</a>&nbsp;<a href="#">易趣店</a>&nbsp;<a href="#">拍拍店</a>&nbsp;<a href="#">有啊店</a></p>
+            <p class="pf_black">Copyright 2015 <span class="pf_gray">127.0.0.1.</span> All Rights Reserved.版权所有:广州网软志成信息科技有限公司</p>
+            <p class="pf_black">客户服务热线:020-34506590 传真:020-34506590</p>
+            <p class="pf_black">客户服务邮箱: <span class="pf_gray">webmaster&copy;wrzc.net 奥ICP备06122404号 管理进入</span></p>
+            <p class="pf_light">总部地址:广州市天河区软件产业基地8栋&nbsp;&nbsp;联系电话:020-34506590 34700400 34709708 1379872397 13749865320</p>
+            <p class="pf_light">客服QQ:290116505
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+                394223545
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+                469648611
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+                314730679
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+            </p>
+            <p class="pf_light">
+                客服QQ:290116505
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+                38306293
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+                417586492
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+                657248708
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+            </p>
+            <p class="pf_light">E-mail:webmaster&nbsp;wrzc.net MSN:wrtxcn&copy;hotmail.com</p>
+            <p class="pf_light">Copyright(c) 2000-2020 www.wrzc.net 广州网软志成 版权所有<a href="#">后台管理登录入口</a></p>
+        </div>
+        <div id="pf_l">
+            <div id="pfl_up">
+                广州网软志成更多更好的网站系统等你来用
+            </div>
+            <div id="pfl_down">
+                仿京东商城源码,仿京东商城源码下载,免费购物系统商业版,仿京东商城系统源码,在线商城京东商城网页模板,免费的京东商城源代码,电子商城源代码,购物商城源代码,网络商城程序,商
+                城程序,独立商城程序,商城程序开发,晚上商城程序,京东数码商城程序,在线商城程序下载,商城系统,电子商城系统,网络商城系统,b2c商城系统,免费商城系统,购物商城系统,网上商城系
+                统,asp商城系统,仿京东商城源码,仿京东商城源码下载,免费购物系统商业版,仿京东商城系统源码,在线商城京东商城网页模板,免费的京东商城源代码,电子商城源代码,购物商城源代码,网络商城程序,商
+                城程序,独立商城程序,商城程序开发,晚上商城程序,京东数码商城程序,在线商城程序下载,商城系统,电子商城系统,网络商城系统,b2c商城系统,免费商城系统,购物商城系统,网上商城系
+                统,asp商城系统,仿京东商城源码,仿京东商城源码下载,免费购物系统商业版,仿京东商城系统源码,在线商城京东商城网页模板,免费的京东商城源代码,电子商城源代码,购物商城源代码,网络商城程序,商
+                城程序,独立商城程序,商城程序开发,晚上商城程序,京东数码商城程序,在线商城程序下载,商城系统,电子商城系统,网络商城系统,b2c商城系统,免费商城系统,购物商城系统,网上商城系
+                统,asp商城系统,仿京东商城源码,仿京东商城源码下载,免费购物系统商业版,仿京东商城系统源码,在线商城京东商城网页模板,免费的京东商城源代码,电子商城源代码,购物商城源代码,网络商城程序,商
+                城程序,独立商城程序,商城程序开发,晚上商城程序,京东数码商城程序,在线商城程序下载,商城系统,电子商城系统,网络商城系统,b2c商城系统,免费商城系统,购物商城系统,网上商城系
+                统,asp商城系统,仿京东商城源码,仿京东商城源码下载,免费购物系统商业版,仿京东商城系统源码,在线商城京东商城网页模板,免费的京东商城源代码,电子商城源代码,购物商城源代码,网络商城程序,商
+                城程序,独立商城程序,商城程序开发,晚上商城程序,京东数码商城程序,在线商城程序下载,商城系统,电子商城系统,网络商城系统,b2c商城系统,免费商城系统,购物商城系统,网上商城系统
+            </div>
+        </div>
+        <p><a href="#">特大优惠:加379元即送300m空间,顶级域名1个,加579元即送500m空间,顶级域名1个,加879元即送1000m空间,顶级域名一个</a></p>
+    </div>
+</div>
+<script src="../scripts/getTime.js"></script>
+<script src="../scripts/jquery-2.1.4.min.js"></script>
+<script src="../scripts/lunfantu.js"></script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>产品详情页面</title>
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="container">
+    <!--网站头部-->
+    <div class="page_top">
+        <div id="pt_img"><img src="../images/logo.gif" alt="w网页logo"></div>
+        <div id="pt_middle">
+            您好,欢迎来到麦子商城!想继续购物?[<a href="login.html">请登录</a>],新用户?[<a href="register.html">免费注册</a>]
+        </div>
+        <div id="pt_right">
+            <ul class="pt_list">
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">客户反馈</a></li>
+                <li><a href="#">网站地图</a></li>
+                <li class="sc"><a href="#">加入收藏</a></li>
+                <li class="sc"><span id="Clock"></span></li>
+            </ul>
+            <div id="pt_mar">
+                <marquee height="35px" direction="up" scrollamount="3">
+                    <ul>
+                        <li><a href="#">1.最新公告,明天有秒杀活动!大家都来看看呢!机会难得,机不可失</a></li>
+                        <li><a href="#">2.明天有秒杀活动!</a></li>
+                    </ul>
+                </marquee>
+            </div>
+        </div>
+    </div>
+    <!--网站导航-->
+    <div class="nav">
+        <div id="nav_top">
+            <ul>
+                <li><a href="index.html">网站首页</a></li>
+                <li><a href="#">分类导航</a></li>
+                <li><a href="#">品牌导航</a></li>
+                <li><a href="shopping.html">我的购物</a></li>
+                <li><a href="productList.html">产品列表</a></li>
+                <li><a href="quotation.html">报价单</a></li>
+                <li><a href="pay.html">发货单</a></li>
+            </ul>
+        </div>
+        <div id="nav_bottom">
+            <div id="p_type">
+                <span>商品搜索:</span>
+                <select name="alltype">
+                    <option value="">所有分类</option>
+                    <option value="">最新商品</option>
+                    <option value="">热卖商品</option>
+                </select>
+            </div>
+            <div id="p_search">
+                <input type="text">
+                <input type="button" value="搜索">
+            </div>
+            <div id="p_text">
+                高级/组合搜索
+            </div>
+            <div id="p_image">
+                <div id="gwc"><a href="#">购物车暂时为空</a></div>
+                <div id="js"><a href="#">去结算</a></div>
+                <div id="yh"><a href="shopping.html" target="_blank">用户中心</a></div>
+            </div>
+        </div>
+    </div>
+    <!--网站左边部分-->
+    <div class="pb_left">
+        <div id="pl_user">
+            <h3 class="slide_h3">用户中心</h3>
+
+            <div class="border">
+                <ul>
+                    <li><img src="../images/user/1.gif"/>&nbsp;<a href="#">注册&nbsp;/&nbsp;登录</a></li>
+                    <li><img src="../images/user/8.gif"/>&nbsp;<a href="#">购物车(0)</a></li>
+                    <li><img src="../images/user/10.gif"/>&nbsp;<a href="#">对比框(0)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pl_llcp">
+            <h3 class="slide_h3">最近浏览产品</h3>
+            <div class="border">
+                <div class="pr_p3 pr_p31 plist_p3">
+                    <div class="pr_img3"><a href=""><img src="../images/imgs/pm_body_03.jpg" alt=""></a></div>
+                    <div class="pr_inf">
+                        <p><a href="#">霍尼韦尔<br/>
+                            (Honerwell)5010-CHN空气净化器<br/>
+                            <span class="pr_jg">￥1298.00元</span></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--产品详情列表中间部分-->
+    <div class="shop_middle p_middle">
+        <p class="shopm_up">
+            <img src="../images/img/home.gif" alt="home"> 您的位置:&nbsp;<a href="index.html" class="a_sy">首页</a> >> <a href="#" class="a_sy">家用电器</a> >> <a href="#" class="a_sy">生活电器</a> >> 霍尼韦尔 (Honerwell) 5010-CHN空气净化器
+        </p>
+        <div class="p_listD">
+            <div class="pl_img">
+                <div id="big_img">
+                    <img src="../images/imgs/big_1.png" alt="" id="big_src" onmousemove="move();" onmouseout="out();">
+                </div>
+                <div id="small_img">
+                    <a href="#"><img src="../images/imgs/big_1.png" alt="s1" onmouseover="changeImgs();initImg()" id="s1"></a>
+                    <a href="#"><img src="../images/imgs/big_2.png" alt="s2" onmouseover="changeImgs();initImg()" id="s2"></a>
+                    <a href="#"><img src="../images/imgs/big_3.png" alt="s3" onmouseover="changeImgs();initImg()" id="s3"></a>
+                    <a href="#"><img src="../images/imgs/big_4.png" alt="s4" onmouseover="changeImgs();initImg()" id="s4"></a>
+                    <a href="#"><img src="../images/imgs/big_5.png" alt="s5" onmouseover="changeImgs();initImg()" id="s5"></a>
+                </div>
+            </div>
+            <div class="pl_info">
+                <div id="fdj">
+                    <img src="../images/imgs/big_1.png" alt="" id="targetImg">
+                </div>
+                <p class="pb_dotted p_32"><span class="f_p">霍尼韦尔 (Honerwell) 5010-CHN空气净化器</span><span class="text_right"><a href="#">(0篇用户评论</a>|<a href="#">写评论)</a></span></p>
+                <p class="p_32">商品编号:10042710521400</p>
+                <p class="pb_dotted p_32">商品积分: <span class="f_red"></span>1298 <a href="#">(积分可兑换优惠券)</a></p>
+                <p class="f_c4 p_32">市场价格: <span class="old_p">￥1998.00元</span></p>
+                <p class="p_32">本站价格: <span class="pr_jg">￥1298.00元</span></p>
+                <p class="p_32">为您节省: <span class="pr_jg">￥700.00元</span></p>
+                <p class="p_32">订购数量: <input type="number" value="1" class="pd_num"></p>
+                <p class="p_32">
+                    <a href="#"><img src="../images/img/buy.gif" alt=""></a>
+                    <a href="#"><img src="../images/img/duibi.gif" alt=""></a>
+                    <a href="#"><img src="../images/img/shoucang.gif" alt=""></a>
+                </p>
+            </div>
+        </div>
+        <p class="p_40 pb_dotted"><span class="plist_bold">下一个商品:</span><a href="#" class="p_next">美的 (media) 电脑版电压力锅PCS507一锅双胆</a>
+            <span class="text_right right_img">
+                <img src="../images/pay/alipay_buy.gif" alt="zfb">
+                <img src="../images/pay/paypal_buy.gif" alt="pal">
+            </span>
+        </p>
+        <div id="pi_up">
+            <a href="#" onmouseover="showDiv(1);">详细说明</a>
+            <a href="#" onmouseover="showDiv(2);">相关商品</a>
+            <a href="#" onmouseover="showDiv(3);">商品评论</a>
+            <a href="#" onmouseover="showDiv(4);">付款方式</a>
+            <a href="#" onmouseover="showDiv(5);">送货方式</a>
+        </div>
+        <div class="p_js info_1">
+            <p>美国霍尼韦尔是最专业的空气净化器品牌,能快速的净化空气质量</p>
+            <p>1.刚刚装修或翻新的居所</p>
+            <p>2.有老人、儿童，孕妇、新生儿的居所</p>
+            <p>3.有哮喘、过敏性鼻炎及花粉过敏症人员的居所</p>
+            <p>4.饲养宠物的居所</p>
+            <p>5.较封闭或受到二手烟影响的居所</p>
+            <p>6.酒店，公众场所</p>
+            <p>7.愿受高品质生活的人群的居所</p>
+            <p>选购与保养</p>
+            <p>1、是否具有绝对的安全性</p>
+            <p>选购空气净化器，无非都是想用其来换取健康清新的空气。把以一台空气净化器是否安全，是决定其是否可取的基本前提条件。空气净化器的外壳、机芯与净化技术，将会直接影响着空气净化器的安全性。净化技术，应选择与自然界中的正负离子一样，并有国外13家机构认证其安全性的离子净化技术</p>
+            <p>2、是否具有科学的净化原理，达到高效的空气净化器效果</p>
+            <p>国际通行的空气净化原理有五种，物理式、静电式、化学式、负离子式和复合式。一般来说，物理式净化是最常用也效果最好的方法。例如灰尘、 花粉、过敏物质、病毒等大颗粒物质，可以通过物理净化方式中的HEPA技术来过滤；而苯、甲苯、甲醛和其他异味等有害物质，则可以通过物理净化方式中的活性炭吸附来净化。
+            按净化方式从能动的方向来分，净化方式从能动的方向来分，又有主动净化方式（空中净化）和被动净化方式（定点净化）和主被动复合净化三种。被动净化方式只 对吸入的空气有净化效果；主动的净化方式对整个空间都会有净化效果。主被动复合净化是两者的相结合，效果也更加好。
+            主动净化在国际上是备受争议的技术。因为空气中的污染物一般是十万分之一甚至更低的浓度，而主动净化需要往空气中喷洒更高浓度的化学物质，所以从总体上来说，甚至是增加了空气的污染程度。譬如，往空气中释放臭氧，在欧美国家是被严格禁止的</p>
+            <p>3、是否满足具体的净化需求</p>
+            <p>就空气净化器而言，净化功能是最为关注的功能。如果您对室内空气净化器的要求只是基于提高室内空气质量的话，可以选择单纯净化空气，性价比高的类型。
+            而随着人们对生活质量需要的日益提高，对空气净化器的需求不再是单纯的净化室内空气。如，那些在密闭的空调房内工作的人群，因为空调的抽湿作用使房间里的空气变得十分干燥，皮肤也变得干燥，所以在选择空气净化器时，会选购具有美肤功能的加湿空气净化器。
+            而长期处于人多、室内污染较大的人群，需要近距离呼吸到清新无细菌的空气，在选购空气净化器时，会偏向于小型的适合放在桌面的k空气净化器。
+            而拥有自己的轿车的人群，则应该选择汽车车载空气净化器，净化各种汽车异味，甚至缓解开车疲劳</p>
+            <p>4、结合市场销售量和第三方权威认证进行选购</p>
+            <p>一台高品质的家用空气净化器，必须具有除菌、除异味的净化能力。选购空气净化器时，尤为注意其除菌力和除异味能力是否浪得虚名。一般来讲，销量是一个关键的市场检验指标。
+            另外，像家具桌子下、沙发床垫等污浊空气集中的地方滋生着白色葡萄球菌、大肠杆菌、流感病毒等常见浮游菌；新装修的房子里布满了甲醛、苯和TVOC等有害气体。空气净化器对这些有害物质的净化效果，如果得到第三方权威机构的验证，会更具其说服力</p>
+        </div>
+        <div class="p_js info_2">
+            <p>
+                爱惠浦净水器<br/>
+                爱惠浦是世界上最大的专业水处理设备制造公司滨特尔水集团的旗下品牌之一，名字源于英文EVERPURE的音译（英文的汉语意思即，永远纯净）。
+                爱惠浦公司自1933年以来，为食品制造和加工业、自动售卖机、家用、商用、航海、航空等提供水处理方案，是全世界的领军企业。凭着精良的制造工艺、严格的品质监控和定期的第三方测试认证，赢得了良好的国际声誉。
+                爱惠浦产品的宗旨是改善食品和饮料的品质，去除有害的化学微粒和污染物，减少用水设备的维护成本和时间。其产品通过了NSF国际组织最高标准的测试和认证。众多国际知名品牌都坚持选用爱惠浦的过滤系统，诸如可口可乐、美联航、温尼贝戈、迪斯尼、美国海军以及空军一号等。
+                所有家用的爱惠浦过滤系统和替换滤芯都得到了NSF的机构认证。该机构为独立的非营利性机构，并且致力于公共健康卫生，安全以及环保事业 作为当今市场上水处理产品监测的权威机构，NSF对于食品、水质、空气和消费品都制定了国际性的统一品质标准且得到了全世界的认可。该项认证位于滤芯标签上，表明该系统已经过认证符合相关的品质标准。
+                爱惠浦的水处理技术通过严格的年度监测评估，能够运用吸附及过滤安全地去除水中的杂质。该技术也得到了NSF机构的认证，通过了NSF/ANSI第42号和53号的标准检测；第42号标准为感官标准，即通过检测认可能够减少异臭，氯以及氯胺；第53号标准为健康标准，即通过检测认可能够减少例如VOC,铅，MTBE,孢子以及石棉等污染物。
+            </p>
+        </div>
+        <div class="p_js info_3">
+            <div class="ping">
+                <div class="buy_shuo">
+                    <p>很满意，买了两个，一个自己家用的，一个送朋友的。很满意，朋友也说很好用，没有自来水的味道，价格也很划算。 小刘童鞋的服务很好，超赞，谢谢</p>
+                    <p><pubdate>2014.09.25</pubdate></p>
+                </div>
+                <div class="buy_name">
+                    <p>冰***6<span class="f_ccc">（匿名）</span></p>
+                </div>
+            </div>
+            <div class="ping">
+                <div class="buy_shuo">
+                    <p>很好用 自己安装的不难 非常满意 服务很好</p>
+                    <p><pubdate>2014.09.11</pubdate></p>
+                </div>
+                <div class="buy_name">
+                    <p>大***8<span class="f_ccc">（匿名）</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="p_js info_4">
+            <p>本站支持以下支付方式:</p>
+            <a href="#"><img src="../images/pay/logo_tenpay.gif" alt="cft"></a>
+            <a href="#"><img src="../images/pay/logo_alipay.gif" alt="zfb"></a>
+            <a href="#"><img src="../images/pay/logo_ebank.gif" alt="wyzx"></a>
+            <a href="#"><img src="../images/pay/logo_paypal.gif" alt="pay"></a>
+            <a href="#"><img src="../images/pay/logo_99bill.jpg" alt="kq"></a>
+            <a href="#"><img src="../images/pay/logo_cncard.gif" alt="zfw"></a>
+        </div>
+        <div class="p_js info_5">
+            <p>天天快递</p>
+            <p>韵达快递</p>
+            <p>中通快递</p>
+            <p>百世汇通快递</p>
+        </div>
+    </div>
+    <!--网站底部-->
+    <div class="page_footer">
+        <div id="pf_f">
+            <dl>
+                <dt>关于我们</dt>
+                <dd><img src="../images/img/dot.gif"> <a href="#">发展历程</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">联系方式</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">公司介绍</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">企业文化</a></dd>
+            </dl>
+            <dl>
+                <dt>付款方式</dt>
+                <dd><img src="../images/img/dot.gif"> <a href="#">银行付款</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">在线支付</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">银行付款</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">公司转账</a></dd>
+            </dl>
+            <dl>
+                <dt>送货方式</dt>
+                <dd><img src="../images/img/dot.gif"> <a href="#">上门自取</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">EMS快递</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">快递发货</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">平邮发货</a></dd>
+            </dl>
+            <dl>
+                <dt>售后服务</dt>
+                <dd><img src="../images/img/dot.gif"> <a href="#">质保承诺</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">退换货政策</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">价格保护</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">返修申请</a></dd>
+            </dl>
+            <dl>
+                <dt>购物帮助</dt>
+                <dd><img src="../images/img/dot.gif"> <a href="#">用户等级</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">积分获得与使用</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">购物流程</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">常见问题</a></dd>
+            </dl>
+        </div>
+        <div id="pf_m">
+            <p class="pf_gray"><a href="#">淘宝店</a>&nbsp;<a href="#">易趣店</a>&nbsp;<a href="#">拍拍店</a>&nbsp;<a href="#">有啊店</a></p>
+            <p class="pf_black">Copyright 2015 <span class="pf_gray">127.0.0.1.</span> All Rights Reserved.版权所有:广州网软志成信息科技有限公司</p>
+            <p class="pf_black">客户服务热线:020-34506590 传真:020-34506590</p>
+            <p class="pf_black">客户服务邮箱: <span class="pf_gray">webmaster&copy;wrzc.net 奥ICP备06122404号 管理进入</span></p>
+            <p class="pf_light">总部地址:广州市天河区软件产业基地8栋&nbsp;&nbsp;联系电话:020-34506590 34700400 34709708 1379872397 13749865320</p>
+            <p class="pf_light">客服QQ:290116505
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+                394223545
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+                469648611
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+                314730679
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+            </p>
+            <p class="pf_light">
+                客服QQ:290116505
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+                38306293
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+                417586492
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+                657248708
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+            </p>
+            <p class="pf_light">E-mail:webmaster&nbsp;wrzc.net MSN:wrtxcn&copy;hotmail.com</p>
+            <p class="pf_light">Copyright(c) 2000-2020 www.wrzc.net 广州网软志成 版权所有<a href="#">后台管理登录入口</a></p>
+        </div>
+        <div id="pf_l">
+            <div id="pfl_up">
+                广州网软志成更多更好的网站系统等你来用
+            </div>
+            <div id="pfl_down">
+                仿京东商城源码,仿京东商城源码下载,免费购物系统商业版,仿京东商城系统源码,在线商城京东商城网页模板,免费的京东商城源代码,电子商城源代码,购物商城源代码,网络商城程序,商
+                城程序,独立商城程序,商城程序开发,晚上商城程序,京东数码商城程序,在线商城程序下载,商城系统,电子商城系统,网络商城系统,b2c商城系统,免费商城系统,购物商城系统,网上商城系
+                统,asp商城系统,仿京东商城源码,仿京东商城源码下载,免费购物系统商业版,仿京东商城系统源码,在线商城京东商城网页模板,免费的京东商城源代码,电子商城源代码,购物商城源代码,网络商城程序,商
+                城程序,独立商城程序,商城程序开发,晚上商城程序,京东数码商城程序,在线商城程序下载,商城系统,电子商城系统,网络商城系统,b2c商城系统,免费商城系统,购物商城系统,网上商城系
+                统,asp商城系统,仿京东商城源码,仿京东商城源码下载,免费购物系统商业版,仿京东商城系统源码,在线商城京东商城网页模板,免费的京东商城源代码,电子商城源代码,购物商城源代码,网络商城程序,商
+                城程序,独立商城程序,商城程序开发,晚上商城程序,京东数码商城程序,在线商城程序下载,商城系统,电子商城系统,网络商城系统,b2c商城系统,免费商城系统,购物商城系统,网上商城系
+                统,asp商城系统,仿京东商城源码,仿京东商城源码下载,免费购物系统商业版,仿京东商城系统源码,在线商城京东商城网页模板,免费的京东商城源代码,电子商城源代码,购物商城源代码,网络商城程序,商
+                城程序,独立商城程序,商城程序开发,晚上商城程序,京东数码商城程序,在线商城程序下载,商城系统,电子商城系统,网络商城系统,b2c商城系统,免费商城系统,购物商城系统,网上商城系
+                统,asp商城系统,仿京东商城源码,仿京东商城源码下载,免费购物系统商业版,仿京东商城系统源码,在线商城京东商城网页模板,免费的京东商城源代码,电子商城源代码,购物商城源代码,网络商城程序,商
+                城程序,独立商城程序,商城程序开发,晚上商城程序,京东数码商城程序,在线商城程序下载,商城系统,电子商城系统,网络商城系统,b2c商城系统,免费商城系统,购物商城系统,网上商城系统
+            </div>
+        </div>
+        <p><a href="#">特大优惠:加379元即送300m空间,顶级域名1个,加579元即送500m空间,顶级域名1个,加879元即送1000m空间,顶级域名一个</a></p>
+    </div>
+</div>
+<script src="../scripts/jquery-2.1.4.min.js"></script>
+<script src="../scripts/style.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册界面</title>
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="container">
+    <!--网站头部-->
+    <div class="page_top">
+        <div id="pt_img"><img src="../images/logo.gif" alt="w网页logo"></div>
+        <div id="pt_middle">
+            您好,欢迎来到麦子商城!想继续购物?[<a href="login.html">请登录</a>],新用户?[<a href="register.html">免费注册</a>]
+        </div>
+        <div id="pt_right">
+            <ul class="pt_list">
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">客户反馈</a></li>
+                <li><a href="#">网站地图</a></li>
+                <li class="sc"><a href="#">加入收藏</a></li>
+                <li class="sc"><span id="Clock"></span></li>
+            </ul>
+            <div id="pt_mar">
+                <marquee height="35px" direction="up" scrollamount="3">
+                    <ul>
+                        <li><a href="#">1.最新公告,明天有秒杀活动!大家都来看看呢!机会难得,机不可失</a></li>
+                        <li><a href="#">2.明天有秒杀活动!</a></li>
+                    </ul>
+                </marquee>
+            </div>
+        </div>
+    </div>
+    <!--网站导航-->
+    <div class="nav">
+        <div id="nav_top">
+            <ul>
+                <li><a href="index.html">网站首页</a></li>
+                <li><a href="#">分类导航</a></li>
+                <li><a href="#">品牌导航</a></li>
+                <li><a href="shopping.html">我的购物</a></li>
+                <li><a href="productList.html">产品列表</a></li>
+                <li><a href="quotation.html">报价单</a></li>
+                <li><a href="pay.html">发货单</a></li>
+            </ul>
+        </div>
+        <div id="nav_bottom">
+            <div id="p_type">
+                <span>商品搜索:</span>
+                <select name="alltype">
+                    <option value="">所有分类</option>
+                    <option value="">最新商品</option>
+                    <option value="">热卖商品</option>
+                </select>
+            </div>
+            <div id="p_search">
+                <input type="text">
+                <input type="button" value="搜索">
+            </div>
+            <div id="p_text">
+                高级/组合搜索
+            </div>
+            <div id="p_image">
+                <div id="gwc"><a href="#">购物车暂时为空</a></div>
+                <div id="js"><a href="#">去结算</a></div>
+                <div id="yh"><a href="shopping.html" target="_blank">用户中心</a></div>
+            </div>
+        </div>
+    </div>
+    <!--注册界面左边部分-->
+    <div class="pb_left">
+        <div id="pl_user">
+            <h3 class="slide_h3">用户中心</h3>
+
+            <div class="border">
+                <ul>
+                    <li><img src="../images/user/1.gif"/>&nbsp;<a href="#">注册&nbsp;/&nbsp;登录</a></li>
+                    <li><img src="../images/user/8.gif"/>&nbsp;<a href="#">购物车(0)</a></li>
+                    <li><img src="../images/user/10.gif"/>&nbsp;<a href="#">对比框(0)</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--注册界面中间部分-->
+    <div class="shop_middle">
+        <div class="shopm_up">
+            <img src="../images/img/home.gif" alt="home"> 您的位置:&nbsp;<a href="index.html" class="a_sy">首页</a> >> 新用户注册:&nbsp;&nbsp;(老用户请<a href="#" class="a_login">登录</a>,忘记密码请<a href="#" class="a_login">点击这里</a>)
+        </div>
+        <form class="register_form" action="login.html">
+            <p class="buyer_info register_info">
+                <span class="f_ff">*</span> <label class="label">用 户 名:</label>&nbsp;<input type="text" class="inputxt"/>
+            </p>
+            <p class="buyer_info register_info">
+                <span class="f_ff">*</span> <label class="label">密&nbsp;&nbsp;码:</label>&nbsp;<input type="password" name="userpassword" class="inputxt"/>
+            </p>
+            <p class="buyer_info register_info">
+                <span class="f_ff">*</span> <label class="label">确认密码:</label>&nbsp;<input type="password" class="inputxt"/>
+            </p>
+            <p class="buyer_info register_info">
+                <span class="f_ff">*</span> <label class="label">电子邮箱:&nbsp;</label><input type="text" class="inputxt"/>
+            </p>
+            <p class="buyer_info register_info2">密码保护问题:&nbsp;<input type="text"/> 建议填写,否则将无法使用密码找回功能!</p>
+            <p class="buyer_info register_info2">找回密码答案:&nbsp;<input type="text"/> 建议填写,否则将无法使用密码找回功能!</p>
+            <p class="register_info3 top_10"><input type="checkbox" checked>请确认阅读并同意<<<a href="#" class="f_blue plist_bold">注册协议</a>>></p>
+            <button class="btn_submit btn_left top_10">提&nbsp;交</button>
+        </form>
+    </div>
+    <!--网站底部-->
+    <div class="page_footer">
+        <div id="pf_f">
+            <dl>
+                <dt>关于我们</dt>
+                <dd><img src="../images/img/dot.gif"> <a href="#">发展历程</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">联系方式</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">公司介绍</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">企业文化</a></dd>
+            </dl>
+            <dl>
+                <dt>付款方式</dt>
+                <dd><img src="../images/img/dot.gif"> <a href="#">银行付款</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">在线支付</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">银行付款</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">公司转账</a></dd>
+            </dl>
+            <dl>
+                <dt>送货方式</dt>
+                <dd><img src="../images/img/dot.gif"> <a href="#">上门自取</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">EMS快递</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">快递发货</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">平邮发货</a></dd>
+            </dl>
+            <dl>
+                <dt>售后服务</dt>
+                <dd><img src="../images/img/dot.gif"> <a href="#">质保承诺</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">退换货政策</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">价格保护</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">返修申请</a></dd>
+            </dl>
+            <dl>
+                <dt>购物帮助</dt>
+                <dd><img src="../images/img/dot.gif"> <a href="#">用户等级</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">积分获得与使用</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">购物流程</a></dd>
+                <dd><img src="../images/img/dot.gif"> <a href="#">常见问题</a></dd>
+            </dl>
+        </div>
+        <div id="pf_m">
+            <p class="pf_gray"><a href="#">淘宝店</a>&nbsp;<a href="#">易趣店</a>&nbsp;<a href="#">拍拍店</a>&nbsp;<a href="#">有啊店</a>
+            </p>
+
+            <p class="pf_black">Copyright 2015 <span class="pf_gray">127.0.0.1.</span> All Rights
+                Reserved.版权所有:广州网软志成信息科技有限公司</p>
+
+            <p class="pf_black">客户服务热线:020-34506590 传真:020-34506590</p>
+
+            <p class="pf_black">客户服务邮箱: <span class="pf_gray">webmaster&copy;wrzc.net 奥ICP备06122404号 管理进入</span></p>
+
+            <p class="pf_light">总部地址:广州市天河区软件产业基地8栋&nbsp;&nbsp;联系电话:020-34506590 34700400 34709708 1379872397
+                13749865320</p>
+
+            <p class="pf_light">客服QQ:290116505
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+                394223545
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+                469648611
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+                314730679
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+            </p>
+
+            <p class="pf_light">
+                客服QQ:290116505
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+                38306293
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+                417586492
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+                657248708
+                <img src="../images/pf_qq.png" alt="qq"/>
+                <img src="../images/qqjt.png" alt="qqjt"/>
+            </p>
+
+            <p class="pf_light">E-mail:webmaster&nbsp;wrzc.net MSN:wrtxcn&copy;hotmail.com</p>
+
+            <p class="pf_light">Copyright(c) 2000-2020 www.wrzc.net 广州网软志成 版权所有<a href="#">后台管理登录入口</a></p>
+        </div>
+        <div id="pf_l">
+            <div id="pfl_up">
+                广州网软志成更多更好的网站系统等你来用
+            </div>
+            <div id="pfl_down">
+                仿京东商城源码,仿京东商城源码下载,免费购物系统商业版,仿京东商城系统源码,在线商城京东商城网页模板,免费的京东商城源代码,电子商城源代码,购物商城源代码,网络商城程序,商
+                城程序,独立商城程序,商城程序开发,晚上商城程序,京东数码商城程序,在线商城程序下载,商城系统,电子商城系统,网络商城系统,b2c商城系统,免费商城系统,购物商城系统,网上商城系
+                统,asp商城系统,仿京东商城源码,仿京东商城源码下载,免费购物系统商业版,仿京东商城系统源码,在线商城京东商城网页模板,免费的京东商城源代码,电子商城源代码,购物商城源代码,网络商城程序,商
+                城程序,独立商城程序,商城程序开发,晚上商城程序,京东数码商城程序,在线商城程序下载,商城系统,电子商城系统,网络商城系统,b2c商城系统,免费商城系统,购物商城系统,网上商城系
+                统,asp商城系统,仿京东商城源码,仿京东商城源码下载,免费购物系统商业版,仿京东商城系统源码,在线商城京东商城网页模板,免费的京东商城源代码,电子商城源代码,购物商城源代码,网络商城程序,商
+                城程序,独立商城程序,商城程序开发,晚上商城程序,京东数码商城程序,在线商城程序下载,商城系统,电子商城系统,网络商城系统,b2c商城系统,免费商城系统,购物商城系统,网上商城系
+                统,asp商城系统,仿京东商城源码,仿京东商城源码下载,免费购物系统商业版,仿京东商城系统源码,在线商城京东商城网页模板,免费的京东商城源代码,电子商城源代码,购物商城源代码,网络商城程序,商
+                城程序,独立商城程序,商城程序开发,晚上商城程序,京东数码商城程序,在线商城程序下载,商城系统,电子商城系统,网络商城系统,b2c商城系统,免费商城系统,购物商城系统,网上商城系
+                统,asp商城系统,仿京东商城源码,仿京东商城源码下载,免费购物系统商业版,仿京东商城系统源码,在线商城京东商城网页模板,免费的京东商城源代码,电子商城源代码,购物商城源代码,网络商城程序,商
+                城程序,独立商城程序,商城程序开发,晚上商城程序,京东数码商城程序,在线商城程序下载,商城系统,电子商城系统,网络商城系统,b2c商城系统,免费商城系统,购物商城系统,网上商城系统
+            </div>
+        </div>
+        <p><a href="#">特大优惠:加379元即送300m空间,顶级域名1个,加579元即送500m空间,顶级域名1个,加879元即送1000m空间,顶级域名一个</a></p>
+    </div>
+</div>
+<script src="../scripts/jquery-2.1.4.min.js"></script>
+<script src="../scripts/Validform_v5.3.2_min.js"></script>
+<script src="../scripts/style.js"></script>
+</body>
+</html>
