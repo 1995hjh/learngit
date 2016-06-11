@@ -1,0 +1,270 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%; /**10 ÷ 16 × 100% = 62.5%    1rem = 10px   **/
+}
+
+body {
+  font-size: 1.4rem; /**1.4 × 10px = 14px **/
+}
+
+h1 {
+  font-size: 2.4rem; /**2.4 × 10px = 24px**/
+}
+.product {
+  width: 99%;
+  top: 65px;
+  left: 0;
+  background: #fff;
+  position: relative;
+  margin: 0 auto 5px auto;
+  ul {
+    width: 100%;
+  }
+  li {
+    border: solid 1px #ccc;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    -moz-box-shadow: 0 0 5px #ccc;
+    -o-box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
+    margin: 10px;
+    min-height: 125px;
+    a {
+      position: relative;
+      width: 100%;
+      display: block;
+      .triangle_topleft {
+        width: 0;
+        height: 0;
+        position: relative;
+        border-top: 60px solid #1aa818;
+        border-right: 60px solid transparent;
+        cursor: pointer;
+        z-index: 990;
+      }
+      .rexiao{border-top-color: #d50806;}
+      .xiangou{border-top-color: #ff7301;}
+      .shuxing {
+        position: relative;
+        color: #fff;
+        z-index: 999;
+        font-size: 14px;
+        width: 40px;
+        height: 40px;
+        margin-top: -60px;
+        display: block;
+        padding-top: 5px;
+        padding-left: 10px;
+        cursor: pointer;
+        transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+      }
+      .leftImages {
+        width: 100px;
+        height: 100px;
+        margin-top: -35px;
+        img {
+          width: 100px;
+          border: 0;
+        }
+        canvas{
+          width: 100px;
+          min-height: 100px;
+          background: #fff url("../images/loading.gif") no-repeat center center;
+          background-size: 15px auto;
+        }
+      }
+      .content_pro {
+        margin-top: -40px;
+        width: calc(100% - 100px);
+        width: 64%;
+        .ptitle {
+          font-size: 16px;
+          color: #4a534e;
+          font-weight: bold;
+          display: block;
+        }
+        .pdes {
+          font-size: 13px;
+          color: #999;
+          margin-top: 5px;
+          display: block;
+        }
+        .pprice {
+          margin-top: 10px;
+          font-size: 14px;
+          color: #4a4a4a;
+        }
+      }
+    }
+  }
+}
+
+
+.recommendcontent {
+  width: 99%;
+  overflow: hidden;
+  margin: 5rem auto 0.5rem auto;
+  background: #fff;
+  ul {
+    width: 100%;
+  }
+  li {
+    overflow: hidden;
+    min-height: 12.5rem;
+    border: 1px solid #f2f2f2;
+    -webkit-box-shadow: 0 0 0.5rem #ccc;
+    -moz-box-shadow: 0 0 0.5rem #ccc;
+    -o-box-shadow: 0 0 0.5rem #ccc;
+    box-shadow: 0 0 0.5rem #ccc;
+    margin: 1rem;
+  }
+  .yuanjiaodown {
+    min-height: 5rem;
+    margin-top: -1rem;
+    -moz-border-radius-bottomleft: 1rem;
+    -webkit-border-bottom-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    -webkit-border-bottom-right-radius: 1rem;
+    -moz-border-radius-bottomright: 1rem;
+    border-bottom-right-radius: 1rem;
+    .buyLabel {
+      font-size: 1.4rem;
+      float: left;
+      margin: 1.5rem 0.2rem 0 1rem;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .buyNum {
+      float: left;
+      overflow: hidden;
+      margin: 1.2em 0 0 0.5em;
+      .reduce {
+        float: left;
+        width: 3.5rem;
+        height: 2.5rem;
+        border: 0.1rem solid #ccc;
+        border-right: none;
+        cursor: pointer;
+        background: url("../images/reduce.gif") no-repeat center center;
+      }
+      .itnums {
+        float: left;
+        width: 8rem;
+        height: 2.5rem;
+        border: 0.1rem solid #ccc;
+        text-align: center;
+        font-size: 1.4rem;
+        color: #990000;
+        font-weight: 800;
+      }
+      .add {
+        float: left;
+        width: 3.5rem;
+        height: 2.5rem;
+        border: 0.1rem solid #ccc;
+        border-left: none;
+        cursor: pointer;
+        background: url("../images/add.gif") center center no-repeat;
+      }
+    }
+  }
+  .yuanjiaoup {
+    -webkit-border-top-left-radius: 1rem;
+    -moz-border-radius-topleft: 1rem;
+    border-top-left-radius: 1rem;
+    -webkit-border-top-right-radius: 1rem;
+    -moz-border-radius-topright: 1rem;
+    border-top-right-radius: 1rem;
+    .leftImgs {
+      width: 30%;
+      height: 10rem;
+      margin-top: 0.5rem;
+      min-width: 10rem;
+      display: block;
+      img {
+        width: 100px;
+        border: 0;
+      }
+    }
+    .rightContent {
+      width: 58%;
+      margin-top: 1rem;
+      .ptitle {
+        font-size: 1.6rem;
+        color: #4a534e;
+        font-weight: bold;
+        display: block;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      .pdes {
+        font-size: 1.3rem;
+        color: #999;
+        margin-top: 0.5rem;
+        display: block;
+      }
+      .pprice {
+        margin-top: 1rem;
+        font-size: 1.4rem;
+        color: #4a4a4a;
+      }
+    }
+  }
+}
+
+.decorations {
+  color: #717171;
+  overflow: hidden;
+  background-color: #efefef;
+  -webkit-box-shadow: 0 0 0.5rem #ccc;
+  -moz-box-shadow: 0 0 0.5rem #ccc;
+  box-shadow: 0 0 0.5rem #ccc;
+  border: 0.1rem solid #ccc;
+  margin: 1rem;
+  padding: 1.5rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 5rem;
+  .dtitle {
+    color: #939494;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  p {
+    text-indent: 2em;
+    line-height: 2.3rem;
+  }
+  img {
+    border: 0;
+    width: 100%;
+  }
+}
+
+.addcart {
+  width: 100%;
+  left: 0px;
+  position: fixed;
+  bottom: 0px;
+  z-index: 10000;
+  margin: 0 auto;
+  display: block;
+  .addcartbtn {
+    width: 98%;
+    background-color: #28c728;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#18b218), to(#28c728));
+    background-image: -webkit-linear-gradient(top, #18b218, #28c728);
+    background-image: linear-gradient(to bottom, #18b218, #28c728);
+    display: block;
+    text-align: center;
+    height: 4rem;
+    line-height: 4rem;
+    border: 0.1rem solid #31b231;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+}

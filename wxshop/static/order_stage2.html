@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no">
+    <title>订单详情之待发货页面</title>
+    <link rel="apple-touch-icon-precomposed" href="images/haoroomsicon.jpg"/>
+    <link rel="apple-touch-startup-image" href="images/haoroomsicon.jpg"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css"/>
+</head>
+<body>
+<nav id="indexnav">
+    <ul>
+        <li id="nav_li1"><a href="index.html"><span></span></a></li>
+        <li id="nav_li2"><a href="shopping.html"><span ></span></a></li>
+        <li id="nav_li3"><a href="user.html"><span class="active"></span></a></li>
+        <li id="nav_li4"><a href="allproduct.html"><span></span></a></li>
+    </ul>
+</nav>
+<section class="myorder">
+    <div class="topcenter">
+        <div class="userhead">
+            <img src="images/morenhead.jpg" alt="" id="myhead">
+        </div>
+        <div class="nipic">
+            <p>龙哥</p>
+            <p class="dingd">我的订单</p>
+        </div>
+    </div>
+    <ul class="buyer_stat">
+        <li class="btn_1">
+            <a href="order_stage1.html">待付款</a>
+            <span>待付款</span>
+        </li>
+        <li class="btn_2 active">
+            <a href="order_stage2.html">待发货</a>
+            <span>待发货</span>
+        </li>
+        <li class="btn_3">
+            <a href="order_stage3.html">待收货</a>
+            <span>待收货</span>
+        </li>
+        <li class="btn_4">
+            <a href="order_stage4.html">已完成</a>
+            <span>已完成</span>
+        </li>
+    </ul>
+    <div class="public">
+        <div class="null_order">
+            <div class="order_pic"></div>
+            <h4>亲， 目前没有订单信息！</h4>
+        </div>
+    </div>
+</section>
+</body>
+<script src="script/libs/require.js" data-main="script/views/enterjs/mainconfig"></script>
+</html>

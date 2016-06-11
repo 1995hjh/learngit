@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no">
+    <title>地址信息页面</title>
+    <link rel="apple-touch-icon-precomposed" href="images/haoroomsicon.jpg"/>
+    <link rel="apple-touch-startup-image" href="images/haoroomsicon.jpg"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css"/>
+</head>
+<body>
+<nav id="indexnav">
+    <ul>
+        <li id="nav_li1"><a href="index.html"><span></span></a></li>
+        <li id="nav_li2"><a href="shopping.html"><span ></span></a></li>
+        <li id="nav_li3"><a href="user.html"><span class="active"></span></a></li>
+        <li id="nav_li4"><a href="allproduct.html"><span></span></a></li>
+    </ul>
+</nav>
+<section id="address">
+    <ul class="addr_info">
+        <li><input type="text" value="填写你的真实姓名" id="name"></li>
+        <li>
+            <div id="region">
+                <select name="sheng" id="sheng"></select>
+                <select name="shi" id="shi"></select>
+                <select name="qu" id="qu"></select>
+            </div>
+        </li>
+        <li><input type="text" value="详细地址(不必重复填写地区)" id="addr"></li>
+        <li><input type="text" value="手机或者电话" id="tel"></li>
+        <li><input type="button" value="保存" id="save"></li>
+    </ul>
+    <ul class="user_addr">
+        <li><p><label class="uname">李四</label>(<label class="uphone">15788888888</label>)</p>
+        <p class="uaddress">浙江省&nbsp;金华市&nbsp;婺城区&nbsp;吕塘下村</p></li>
+        <li>
+            <span class="edit"><img src="images/edit.png" alt="">&nbsp;&nbsp;编辑</span>
+            <span class="del"><img src="images/del.png" alt="">&nbsp;&nbsp;删除</span>
+        </li>
+    </ul>
+    <ul class="user_addr">
+        <li><p><label class="uname">张三</label>(<label class="uphone">13768989561</label>)</p>
+            <p class="uaddress">陕西省&nbsp;渭南市&nbsp;蒲城县&nbsp;翔村镇延兴村</p></li>
+        <li>
+            <span class="edit"><img src="images/edit.png" alt="">&nbsp;&nbsp;编辑</span>
+            <span class="del"><img src="images/del.png" alt="">&nbsp;&nbsp;删除</span>
+        </li>
+    </ul>
+</section>
+<script src="script/libs/require.js" data-main="script/views/enterjs/mainconfig"></script>
+</body>
+</html>

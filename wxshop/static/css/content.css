@@ -1,0 +1,271 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+  /**10 ÷ 16 × 100% = 62.5%    1rem = 10px   **/
+}
+body {
+  font-size: 1.4rem;
+  /**1.4 × 10px = 14px **/
+}
+h1 {
+  font-size: 2.4rem;
+  /**2.4 × 10px = 24px**/
+}
+.product {
+  width: 99%;
+  top: 65px;
+  left: 0;
+  background: #fff;
+  position: relative;
+  margin: 0 auto 5px auto;
+}
+.product ul {
+  width: 100%;
+}
+.product li {
+  border: solid 1px #ccc;
+  -webkit-box-shadow: 0 0 5px #ccc;
+  -moz-box-shadow: 0 0 5px #ccc;
+  -o-box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 5px #ccc;
+  margin: 10px;
+  min-height: 125px;
+}
+.product li a {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.product li a .triangle_topleft {
+  width: 0;
+  height: 0;
+  position: relative;
+  border-top: 60px solid #1aa818;
+  border-right: 60px solid transparent;
+  cursor: pointer;
+  z-index: 990;
+}
+.product li a .rexiao {
+  border-top-color: #d50806;
+}
+.product li a .xiangou {
+  border-top-color: #ff7301;
+}
+.product li a .shuxing {
+  position: relative;
+  color: #fff;
+  z-index: 999;
+  font-size: 14px;
+  width: 40px;
+  height: 40px;
+  margin-top: -60px;
+  display: block;
+  padding-top: 5px;
+  padding-left: 10px;
+  cursor: pointer;
+  transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+.product li a .leftImages {
+  width: 100px;
+  height: 100px;
+  margin-top: -35px;
+}
+.product li a .leftImages img {
+  width: 100px;
+  border: 0;
+}
+.product li a .leftImages canvas {
+  width: 100px;
+  min-height: 100px;
+  background: #ffffff url("../images/loading.gif") no-repeat center center;
+  background-size: 15px auto;
+}
+.product li a .content_pro {
+  margin-top: -40px;
+  width: calc(0%);
+  width: 64%;
+}
+.product li a .content_pro .ptitle {
+  font-size: 16px;
+  color: #4a534e;
+  font-weight: bold;
+  display: block;
+}
+.product li a .content_pro .pdes {
+  font-size: 13px;
+  color: #999;
+  margin-top: 5px;
+  display: block;
+}
+.product li a .content_pro .pprice {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #4a4a4a;
+}
+.recommendcontent {
+  width: 99%;
+  overflow: hidden;
+  margin: 5rem auto 0.5rem auto;
+  background: #fff;
+}
+.recommendcontent ul {
+  width: 100%;
+}
+.recommendcontent li {
+  overflow: hidden;
+  min-height: 12.5rem;
+  border: 1px solid #f2f2f2;
+  -webkit-box-shadow: 0 0 0.5rem #ccc;
+  -moz-box-shadow: 0 0 0.5rem #ccc;
+  -o-box-shadow: 0 0 0.5rem #ccc;
+  box-shadow: 0 0 0.5rem #ccc;
+  margin: 1rem;
+}
+.recommendcontent .yuanjiaodown {
+  min-height: 5rem;
+  margin-top: -1rem;
+  -moz-border-radius-bottomleft: 1rem;
+  -webkit-border-bottom-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  -webkit-border-bottom-right-radius: 1rem;
+  -moz-border-radius-bottomright: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.recommendcontent .yuanjiaodown .buyLabel {
+  font-size: 1.4rem;
+  float: left;
+  margin: 1.5rem 0.2rem 0 1rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.recommendcontent .yuanjiaodown .buyNum {
+  float: left;
+  overflow: hidden;
+  margin: 1.2em 0 0 0.5em;
+}
+.recommendcontent .yuanjiaodown .buyNum .reduce {
+  float: left;
+  width: 3.5rem;
+  height: 2.5rem;
+  border: 0.1rem solid #ccc;
+  border-right: none;
+  cursor: pointer;
+  background: url("../images/reduce.gif") no-repeat center center;
+}
+.recommendcontent .yuanjiaodown .buyNum .itnums {
+  float: left;
+  width: 8rem;
+  height: 2.5rem;
+  border: 0.1rem solid #ccc;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #990000;
+  font-weight: 800;
+}
+.recommendcontent .yuanjiaodown .buyNum .add {
+  float: left;
+  width: 3.5rem;
+  height: 2.5rem;
+  border: 0.1rem solid #ccc;
+  border-left: none;
+  cursor: pointer;
+  background: url("../images/add.gif") center center no-repeat;
+}
+.recommendcontent .yuanjiaoup {
+  -webkit-border-top-left-radius: 1rem;
+  -moz-border-radius-topleft: 1rem;
+  border-top-left-radius: 1rem;
+  -webkit-border-top-right-radius: 1rem;
+  -moz-border-radius-topright: 1rem;
+  border-top-right-radius: 1rem;
+}
+.recommendcontent .yuanjiaoup .leftImgs {
+  width: 30%;
+  height: 10rem;
+  margin-top: 0.5rem;
+  min-width: 10rem;
+  display: block;
+}
+.recommendcontent .yuanjiaoup .leftImgs img {
+  width: 100px;
+  border: 0;
+}
+.recommendcontent .yuanjiaoup .rightContent {
+  width: 58%;
+  margin-top: 1rem;
+}
+.recommendcontent .yuanjiaoup .rightContent .ptitle {
+  font-size: 1.6rem;
+  color: #4a534e;
+  font-weight: bold;
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.recommendcontent .yuanjiaoup .rightContent .pdes {
+  font-size: 1.3rem;
+  color: #999;
+  margin-top: 0.5rem;
+  display: block;
+}
+.recommendcontent .yuanjiaoup .rightContent .pprice {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: #4a4a4a;
+}
+.decorations {
+  color: #717171;
+  overflow: hidden;
+  background-color: #efefef;
+  -webkit-box-shadow: 0 0 0.5rem #ccc;
+  -moz-box-shadow: 0 0 0.5rem #ccc;
+  box-shadow: 0 0 0.5rem #ccc;
+  border: 0.1rem solid #ccc;
+  margin: 1rem;
+  padding: 1.5rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 5rem;
+}
+.decorations .dtitle {
+  color: #939494;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.decorations p {
+  text-indent: 2em;
+  line-height: 2.3rem;
+}
+.decorations img {
+  border: 0;
+  width: 100%;
+}
+.addcart {
+  width: 100%;
+  left: 0px;
+  position: fixed;
+  bottom: 0px;
+  z-index: 10000;
+  margin: 0 auto;
+  display: block;
+}
+.addcart .addcartbtn {
+  width: 98%;
+  background-color: #28c728;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#18b218), to(#28c728));
+  background-image: -webkit-linear-gradient(top, #18b218, #28c728);
+  background-image: linear-gradient(to bottom, #18b218, #28c728);
+  display: block;
+  text-align: center;
+  height: 4rem;
+  line-height: 4rem;
+  border: 0.1rem solid #31b231;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  margin: 0 auto;
+}

@@ -1,0 +1,132 @@
+@charset "utf-8";
+.onthebottom {
+  width: 100%;
+  left: 0px;
+  position: fixed;
+  bottom: 0px;
+  height: 50px;
+  z-index: 10000;
+  margin: 0 auto;
+  display: block;
+  background: #f4f4f4;
+  border-top: 1px solid #B3B3B3;
+}
+.onthebottom .clearcart {
+  width: 45px;
+  float: left;
+  background: url("../images/del.png") left center no-repeat;
+  padding-left: 30px;
+  font-size: 14px;
+  color: #0e69b6;
+  height: 30px;
+  margin-top: 5px;
+  padding-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.onthebottom .totalprice {
+  float: left;
+  margin: 15px 0px 0px 5px;
+  font-size: 1.4rem;
+}
+.onthebottom .jiesuanbtn {
+  margin-top: 10px;
+  margin-right: 5px;
+  float: right;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #28c728;
+  text-align: center;
+  border: 1px solid #31b231;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.cart_content {
+  margin: 0 auto;
+  min-height: 300px;
+  position: relative;
+  width: 99%;
+  top: 50px;
+  left: 0;
+}
+.cart_content .null_shopping {
+  text-align: center;
+  color: #ccc;
+}
+.cart_content .null_shopping .cart_pic {
+  background: url("../images/cart_pic.png") no-repeat center;
+  height: 100px;
+}
+.cart_content .null_shopping h4 {
+  text-indent: 1rem;
+  font-size: 1.8rem;
+  margin: 1rem 0;
+}
+.cart_content .null_shopping p a.enter {
+  line-height: 30px;
+  width: auto;
+  display: inline-block;
+  color: #999;
+  padding: 0.5rem;
+  background-color: #fafafa;
+  font-size: 1.5rem;
+  height: 30px;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+}
+.cart_content .cartlist {
+  width: 100%;
+}
+.cart_content .cartlist li {
+  margin: 1rem;
+}
+.cart_content .cartlist li a {
+  display: block;
+  overflow: hidden;
+  border-bottom: 1px dashed #e7e7e7;
+}
+.cart_content .cartlist li a span {
+  display: block;
+  overflow: hidden;
+  float: left;
+}
+.cart_content .cartlist li a span img {
+  width: 50px;
+}
+.cart_content .cartlist li a span.carttitle {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.cart_content .cartlist li .productoperate {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px dashed #e7e7e7;
+  padding-bottom: 0.5rem;
+}
+.cart_content .cartlist li .productoperate .buylabel {
+  font-size: 1.4rem;
+  float: left;
+  margin: 1.5rem 1rem 0 2rem;
+}
+.cart_content .cartlist li .productoperate .buynuminput {
+  float: left;
+  overflow: hidden;
+  margin: 1.2rem 0 0 1.5rem;
+}
+.cart_content .cartlist li .productoperate .buynuminput span.delbtn {
+  width: 20px;
+  height: 24px;
+  float: left;
+  background: url("../images/del.png") center center no-repeat;
+  margin-left: 30px;
+  background-size: contain;
+  cursor: pointer;
+}
+.cart_content .cartlist li:last-child {
+  margin-bottom: 60px;
+}

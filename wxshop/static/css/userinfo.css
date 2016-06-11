@@ -1,0 +1,48 @@
+@charset "UTF-8";
+.user {
+  width: 99%;
+  overflow: hidden;
+  margin: 10px auto;
+  position: relative;
+  top: 50px;
+}
+.user .div {
+  min-height: 75px;
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 5px #ccc;
+  -moz-box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 5px #ccc;
+  border: 1px solid #f2f2f2;
+  margin: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.user .div:first-child {
+  padding: 5px;
+}
+.user .div:first-child tr {
+  font-size: 12px;
+}
+.user .div:first-child tr img {
+  width: 100px;
+  height: 100px;
+}
+.user .contentlist {
+  height: 60px;
+  width: 90%;
+  padding-right: 30px;
+  border: 1px solid #f2f2f2;
+  border-right: none;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  color: #666;
+  background: url("../images/goforword.png") right center no-repeat;
+}
+.user .contentlist p {
+  font-size: 18px;
+}
+.user .contentlist:last-child {
+  border-bottom: none;
+}

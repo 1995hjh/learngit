@@ -1,0 +1,80 @@
+require.config({
+    paths : {
+        jquery:"../../libs/jquery-2.1.4.min",
+        swiper:"../../plugs/swiper-3.3.1.min",
+        diqu:"../js/diqu2",
+        productList:"../js/productList"
+    }
+});
+require(["jquery","swiper","productList","diqu"],function($,swiper,productList,diqu){
+    $(function(){
+        var swiper = new Swiper('.swiper-container',{
+            autoplay:3000,//自动播放的时间间隔
+            slidesPerView:1,//设置slider容器能够同时显示的slides数量(carousel模式)
+            centeredSlides:true,//默认居中
+            loop:true,//开启循环
+            autoplayDisableOnInteraction:true//用户操作后,禁止自动播放
+        });
+        productList.loadCanvas();
+        productList.set_address();
+        $(window).scroll(productList.scrollHandler);
+        $('.product').on('touchmove',productList.scrollHandler);
+        $('#reducenums').on('click',productList.reduce);
+        $('.reduce').on('click',productList.reduce);
+        $('.add').on('click',productList.add);
+        $('#addnums').on('click',productList.add);
+        $('.addcart').on('click',productList.addCart);
+        if($(".cartnums").val()<1){
+            $(".cartnums").hide();
+        }else{
+            $(".cartnums").show();
+        }
+        $(".delbtn").on("click",function(){
+            $(this).parents("li").remove();
+            if($(".cartlist").children("li").length<1){
+                $(".cartlist").hide();
+                $(".onthebottom").hide();
+                $(".null_shopping").show();
+            }
+        });
+        $(".clearcart").on("click",function(){
+            $(".cartlist").find("li").each(function(){
+                $(this).remove()
+            });
+            $(".cartlist").hide();
+            $(".onthebottom").hide();
+            $(".null_shopping").show();
+        });
+        if($("select[name='sheng']").length>0){
+            new PCAS("sheng","shi","qu","","","");
+        }
+        $('input[name="address"]').change(function(){
+            if($(this).val()==0)
+            {
+                $('#address_form').show();
+            }else
+            {
+                $('#address_form').hide();
+            }
+        });
+        $(".ifvoicenot").on("click",function(){
+            $(this).parent().next().toggle();
+        });
+        $(".lidiv").on("click",function(){
+            $(this).children().eq(0).children().eq(0).attr('checked','checked')
+            productList.set_address();
+        });
+        $(document).on("click",".del",function(){
+            $(this).parents("ul").remove();
+        });
+        $(document).on("click",".edit",productList.address_change);
+        $("#save").on("click",productList.saveInfo);
+        $(".order_action_cancel").on("click",function(){
+            $(this).parents(".order_form").remove();
+            if($(".order_form").length < 1){
+                $(".null_order").show();
+            }
+        });
+        $(document).on("click","#login_user",productList.login);
+    });
+});
