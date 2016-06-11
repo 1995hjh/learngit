@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>产品展示页面</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<p class="lmgl">图片集列表 | 公司相册 ></p>
+<div class="table_wrap">
+    <p class="p_btns">
+        <button class="btn">添加图片集</button>
+        <button class="btn">移动</button>
+        <button class="btn">删除</button>
+        <button class="btn btn_hsz">回收站</button>
+        <input type="text"><button class="btn">查询</button>
+    </p>
+<table class="lm_table">
+    <thead>
+    <tr>
+        <th><input type="checkbox" id="all"></th>
+        <th>编号</th>
+        <th>标题</th>
+        <th>分类</th>
+        <th>点击次数</th>
+        <th>发布时间</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td ><input type="checkbox"></td>
+        <td >1</td>
+        <td class="t_left"><a href="#" class="f_000">迷幻炫彩</a></td>
+        <td >公司相册</td>
+        <td >398</td>
+        <td ><span class="Clock"></span></td>
+        <td class="td_last"><a href="#" class="f_blue">查看</a><a href="#" class="f_blue">编辑</a><a href="#" class="f_blue">删除</a></td>
+    </tr>
+    </tbody>
+</table>
+<div class="page">
+    共&nbsp;1&nbsp;条记录
+</div>
+</div>
+<script src="../scripts/jquery-2.1.4.min.js"></script>
+<script src="../scripts/style.js"></script>
+</body>
+</html>

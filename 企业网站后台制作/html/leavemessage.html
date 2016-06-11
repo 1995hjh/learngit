@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>留言本管理</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<p class="lmgl">留言本管理</p>
+<p class="p_btn">
+    <button class="btn">我要留言</button>
+    <button class="btn">删除</button>
+</p>
+<div class="table_wrap">
+    <table class="lm_table" id="liuyan_table">
+        <thead>
+        <tr>
+            <th><input type="checkbox" id="all"></th>
+            <th></th>
+            <th>留言</th>
+            <th>回复</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>
+                <p>编号:2</p>
+                <p>姓名:明明</p>
+                <p>来自:112.115.192.30</p>
+                <p>电话:</p>
+                <p>QQ:</p>
+            </td>
+            <td class="center_td">
+                <p>蓝色很大气,模板很好看!</p>
+                <p>2014-04-01 15:37:42</p>
+            </td>
+            <td ></td>
+            <td class="td_last"><a href="#" class="f_blue">回复</a><a href="#" class="f_blue">删除</a></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>
+                <p>编号:1</p>
+                <p>姓名:小平</p>
+                <p>来自:112.115.215.93</p>
+                <p>电话:</p>
+                <p>QQ:</p>
+            </td>
+            <td class="center_td">
+                <p>网站不错,很喜欢!</p>
+                <p>2014-03-01 13:32:22</p>
+            </td>
+            <td style="color:red;" class="center_td">
+                <p>谢谢支持!</p>
+                <p>2014-04-01 08:30:22</p>
+            </td>
+            <td class="td_last"><a href="#" class="f_blue">回复</a><a href="#" class="f_blue">删除</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="page">共&nbsp;2&nbsp;条记录</div>
+</div>
+<script src="../scripts/jquery-2.1.4.min.js"></script>
+<script src="../scripts/style.js"></script>
+</body>
+</html>
