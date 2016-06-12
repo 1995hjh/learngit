@@ -1,0 +1,271 @@
+/*通用样式*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font: 14px/24px '微软雅黑';
+}
+.wp{
+    width: 960px;
+    margin: 0 auto;
+}
+.x{
+    float:left;
+}
+.y{
+    float:right;
+}
+.cl{
+    clear: both;
+}
+img{
+    border: none;
+}
+
+.top{
+    width: 100%;
+    height: 24px;
+    background-color: #303030;
+    line-height: 24px;
+    color: #BECDB5;
+}
+.top span{
+    margin-right: 15px;
+}
+.top span.mr_0{
+    margin: 0;
+}
+.top a{
+    color: #BECDB5;
+    text-decoration: none;
+}
+.top a:hover{
+    color: #f60;
+}
+.logos{
+    height: 59px;
+    margin: 15px auto;
+}
+/*搜索样式*/
+.sousuo{
+    width: 350px;
+    height:41px;
+    margin-top: 8px;
+}
+.sousuo input{
+    color: #999;
+    text-indent: 10px;
+    font-size: 16px;
+}
+.sousuo td{
+    height: 41px;
+}
+.s_z{
+    width: 6px;
+    background: url("../image/s_z.jpg") no-repeat;
+}
+.s_c{
+    width: 240px;
+    background: url("../image/s_c.jpg") repeat-x;
+}
+.s_c input{
+    height: 35px;
+    line-height: 35px;
+    border:none;
+    margin-top: 2px;
+    width: 240px;
+}
+.s_y{
+    width: 78px;
+    background: url("../image/s_r.jpg") no-repeat;
+}
+.s_y button{
+    width:78px;
+    height: 41px;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+.dianhua{
+    height: 59px;
+    line-height: 59px;
+}
+.dianhua span{
+    font-size: 26px;
+    color: darkred;
+}
+/*导航栏*/
+.nav{
+    width: 100%;
+    height: 39px;
+    background: url("../image/nav_bg.jpg") repeat-x;
+}
+.nav li{
+    list-style: none;
+    line-height: 39px;
+    padding: 0 28px;
+}
+.nav li.a,.nav li:hover{
+    background: url("../image/nav_hover.jpg") repeat-x;
+}
+.nav a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+/*广告*/
+.ads{
+    background: url("../image/ad.jpg") no-repeat;
+    width: 959px;
+    height: 206px;
+    margin-bottom: 10px;
+}
+.title{
+    padding-bottom: 8px;
+    border-bottom: 1px solid darkred;
+    position: relative;
+    margin-bottom: 10px;
+}
+.title span{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.title span a{
+    text-decoration: none;
+    color: darkred;
+    font-size: 16px;
+}
+.block img{
+    margin: 0 10px 10px 0;
+}
+.block p{
+    text-indent: 30px;
+    color: #646464;
+}
+.xw li{
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    list-style:none;
+    padding-left: 15px;
+    background: url("../image/list_bg.jpg") no-repeat left center;
+}
+.xw li.lia{
+    background: none;
+    padding: 0;
+    height: 76px;
+}
+.xw li.lia img{
+    margin: 0 10px 10px 0;
+}
+.xw a{
+    text-decoration: none;
+    color: #646464;
+}
+.xw span{
+    color: #646464;
+    position: absolute;
+    right: 0;
+    bottom:0;
+    font-size: 12px;
+}
+.xw h3{
+    font-weight: normal;
+    font-size: 14px;
+}
+.lia p{
+    text-indent: 30px;
+    font-size: 12px;
+}
+.introduce{
+    width: 540px;
+    height: 360px;
+    margin-right: 20px;
+}
+.news{
+    width:400px;
+    height: 360px;
+}
+.product{
+    width: 100%;
+    height: 300px;
+}
+.cp li{
+    list-style: none;
+    float: left;
+    margin: 0 10px 10px 0;
+    position: relative;
+    overflow: hidden;
+    width: 151px;
+    height: 96px;
+}
+.cp .pli{
+    margin-right: 0;
+}
+.cp span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+    width:100%;
+    height:24px;
+    line-height: 24px;
+    background: darkred;
+    text-indent: 15px;
+    color: #fff;
+    overflow: hidden;
+    display: none;
+}
+.cp li a:hover span{
+    display: block;
+}
+.footer{
+    width: 100%;
+    height:103px;
+    background: url("../image/footer_bg.jpg") repeat-x;
+}
+.footer_top{
+    line-height: 80px;
+    height: 80px;
+}
+.footer_top span{
+    height: 80px;
+    line-height: 80px;
+    color: #fff;
+}
+.footer_top a{
+   text-decoration: none;
+    color:#fff
+}
+.footer_top .z{
+    font-size: 16px;
+}
+.footer_bottom a{
+    color:#BECDB5;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.footer_bottom a:hover,.footer_top a:hover{
+    color: orange;
+}
+.footer_bottom span{
+    color: orange;
+}
+.top_tool{
+    width: 40px;
+    height: 205px;
+    background: darkred url("../image/top_tool.jpg");
+    position: fixed;
+    right:50px;
+    bottom:150px;
+}
+.top_tool button{
+    width: 40px;
+    height:40px;
+    border: none;
+    margin-bottom: 15px;
+    background: none;
+    cursor: pointer;
+}
