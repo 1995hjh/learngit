@@ -1,0 +1,21 @@
+#listnews li{
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    line-height: 45px;
+    overflow: hidden;
+}
+#listnews li a{
+    margin-right: 322px;
+}
+#listnews li:nth-child(5n+5){
+    border-bottom: 1px solid #cacaca;
+    padding-bottom: 13px;
+}
+#listnews li:hover{
+    text-shadow: 1px 4px 5px #000;
+    -webkit-transition: text-shadow 1s linear ;
+    -moz-transition: text-shadow 1s linear;
+    -o-transition: text-shadow 1s linear;
+    transition: text-shadow 1s linear;
+}

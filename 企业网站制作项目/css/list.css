@@ -1,0 +1,176 @@
+article h1{
+    color: #444;
+    font-size: 16px;
+    border-bottom: 1px solid #b9b9b9;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+#pics li{
+    display: inline-block;
+    width: 202px;
+    height: 146px;
+    margin-right: 11px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#pics li:nth-child(3n){
+    margin-right:0;
+}
+#pics li img{
+    width: 202px;
+    height: 124px;
+    border-radius: 10px;
+}
+a{
+    text-decoration: none;
+    color: #444;
+}
+@-moz-keyframes picslist{
+    0%{
+        -moz-transform:rotate(0deg) scale(0.8);
+        opacity: 0.9;
+    }
+    40%{
+        -moz-transform:rotate(60deg) scale(2);
+        opacity: 1;
+    }
+    70%{
+        -moz-transform:rotate(30deg) scale(1.6);
+        opacity: 0.5;
+    }
+    90%{
+        -moz-transform:rotate(0deg) scale(1);
+        opacity: 0.2;
+    }
+}
+@-webkit-keyframes picslist{
+    0%{
+        -webkit-transform:rotate(0deg) scale(0.8);
+        opacity: 0.9;
+    }
+    40%{
+        -webkit-transform:rotate(60deg) scale(2);
+        opacity: 1;
+    }
+    70%{
+        -webkit-transform:rotate(30deg) scale(1.6);
+        opacity: 0.5;
+    }
+    90%{
+        -webkit-transform:rotate(0deg) scale(1);
+        opacity: 0.2;
+    }
+}
+@-o-keyframes picslist{
+    0%{
+        -o-transform:rotate(0deg) scale(0.8);
+        opacity: 0.9;
+    }
+    40%{
+        -o-transform:rotate(60deg) scale(2);
+        opacity: 1;
+    }
+    70%{
+        -o-transform:rotate(30deg) scale(1.6);
+        opacity: 0.5;
+    }
+    90%{
+        -o-transform:rotate(0deg) scale(1);
+        opacity: 0.2;
+    }
+}
+@-ms-keyframes picslist{
+    0%{
+        -ms-transform:rotate(0deg) scale(0.8);
+        opacity: 0.9;
+    }
+    40%{
+        -ms-transform:rotate(60deg) scale(2);
+        opacity: 1;
+    }
+    70%{
+        -ms-transform:rotate(30deg) scale(1.6);
+        opacity: 0.5;
+    }
+    90%{
+        -ms-transform:rotate(0deg) scale(1);
+        opacity: 0.2;
+    }
+}
+#pics li:hover img{
+    -webkit-animation-name: picslist;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: picslist;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -o-animation-name: picslist;
+    -o-animation-duration: 1s;
+    -o-animation-timing-function: linear;
+    animation-name: picslist;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+#xuhao li{
+    display: inline-block;
+    background: #3598DC;
+    margin: 20px 10px 20px 0px;
+    padding: 3px 11px;
+}
+#xuhao li.on,#xuhao li:hover{
+    background: #444;
+    -moz-transition: background 1s linear;
+    -webkit-transition: background 1s linear;
+    -o-transition: background 1s linear;
+    transition: background 1s linear;
+}
+#xuhao li a{
+    text-decoration: none;
+    color: #fff;
+}
+aside h1{
+    color: #444;
+    font-size: 19px;
+    border-bottom: 1px solid #b9b9b9;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.huodong_b{
+    display: inline-block;
+    vertical-align: top;
+    width: 352px;
+    margin-right: 9px;
+}
+.huodong_b li:before{
+    content: counter(jishuqi);
+    background: #444;
+    padding: 3px;
+    color: #fff;
+    margin-right: 5px;
+}
+.huodong_b li:first-child:before,.huodong_b li:nth-child(2):before,.huodong_b li:nth-child(3):before{
+    background: #3598DC;
+}
+.huodong_b li:last-child:before{
+    padding: 1px;
+}
+.huodong_b li{
+    display: inline-block;
+    width: 352px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    counter-increment: jishuqi;
+    line-height: 34px;
+}
+.huodong_b li:hover{
+    text-shadow: 1px 4px 5px #000;
+    -moz-transition: text-shadow 1s linear 0s;
+    -webkit-transition: text-shadow 1s linear 0s;
+    -o-transition: text-shadow 1s linear 0s;
+    transition: text-shadow 1s linear 0s;
+}
+.huodong_b li a{
+    text-decoration: none;
+    color: #444;
+}

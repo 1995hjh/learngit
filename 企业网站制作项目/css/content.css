@@ -1,0 +1,51 @@
+/*内容页*/
+header.content_h1 h1{
+    font-weight: normal;
+    margin: 20px 0;
+}
+div.title_bar .bdsharebuttonbox.bdshare-button-style0-16 {
+    display: inline-block;
+    vertical-align: bottom;
+}
+div.title_bar .bdsharebuttonbox.bdshare-button-style0-16 a{
+    border: 0;
+    padding-right: 0;
+}
+header div.title_bar{
+    font-size: 10px;
+    color: #808080;
+    border-bottom: solid 1px #CAC7C7;
+    padding-bottom: 2px;
+    line-height: 28px;
+}
+header div.title_bar a{
+    color: #3598DB;
+    border-right: solid 1px #CAC7C7;
+    padding-right: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+header div.title_bar time{
+    margin-right: 20px;
+}
+/*具体新闻*/
+.content_nr{
+    color: #444;
+    padding: 20px 0;
+    text-indent: 34px;
+    line-height: 30px;
+}
+/*相关阅读*/
+section.xiangguanyuedu{
+    margin-top: 20px;
+    height: 38px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+section.xiangguanyuedu a{
+    text-decoration: none;
+    color: #3598DB;
+}
+section.xiangguanyuedu a{
+    margin-right: 10px;
+}
