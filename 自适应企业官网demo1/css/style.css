@@ -1,0 +1,202 @@
+/*公共样式*/
+body{
+    font-family: "Microsoft YaHei";
+}
+.tubiao{
+    background: #40D2B1;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    color: #fff;
+    margin-right: 18px;
+}
+.lvjing{
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.7) ;
+    padding: 90px 0;
+}
+/*导航栏样式*/
+.navbar-default{
+    background: #fff;
+    border: none;
+    box-shadow: 0 2px 8px 0 #143830;
+}
+.navbar-default .navbar-brand{
+    font-size: 30px;
+    color: #40D2B1;
+    font-weight: 900;
+    height: 70px;
+    line-height: 40px;
+    float: left;
+    padding: 15px 15px;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #777;
+    height: 70px;
+    line-height: 35px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #1C9982;
+}
+.navbar-default .navbar-toggle{
+    margin-top: 19px;
+}
+.navbar-default .navbar-toggle:hover{
+    background-color: #40D2B1;
+}
+/*home*/
+#home{
+    width: 100%;
+    background: url("../images/home-bg.jpg");
+    background-size: cover;
+    color: #fff;
+    margin-top: 70px;
+    text-align: center;
+}
+#home h1{
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+#home p{
+    font-weight: 400;
+    line-height: 35px;
+}
+#home img{
+    margin-top: 30px;
+    display: inline-block;
+}
+/*bbs*/
+#bbs{
+    padding: 80px 0;
+    text-align: center;
+}
+#bbs a{
+    color:#000;
+    text-decoration: none;
+}
+#bbs .col-md-4{
+    padding: 15px;
+}
+#bbs .col-md-4:hover{
+    background: #F1F1F1;
+    box-shadow: 1px 1px 4px #ccc;
+}
+#bbs img{
+    margin: 0 auto ;
+}
+#bbs h3{
+    font-weight: bold;
+}
+/*html5+bootstrap*/
+#html5{
+    background: #F8F8F8;
+}
+#html5,#bootstrap{
+    padding: 80px 0;
+}
+#html5 h2,#bootstrap h2{
+    font-weight: bold;
+}
+#html5 p,#bootstrap p{
+    line-height: 25px;
+}
+/*course*/
+#course{
+    background: #F8F8F8;
+    padding: 80px 0;
+    text-align: center;
+}
+#course h2{
+    font-weight: bold;
+    margin-bottom: 75px;
+}
+#course .course-div{
+    width: 275px;
+    height: 260px;
+    background: #fff;
+    margin: 0 30px 20px 0;
+}
+.btn-primary{
+    color: #40D2B1;
+    border: 1px solid #40D2B1;
+    border-radius: 0;
+    width: 135px;
+    height: 35px;
+    margin-top: 20px;
+    background: none;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #40D2B1;
+    border: 1px solid #40D2B1;
+}
+/*app*/
+#app{
+    padding: 80px 0;
+}
+#app h2{
+    font-weight: bold;
+    margin-bottom: 45px;
+}
+#app span{
+    margin-right: 5px;
+}
+.btn-app{
+    color:#fff;
+    background:#40D2B1;
+}
+.btn-app:hover{
+    background: #27826b;
+}
+/*contact*/
+#contact{
+    background: url("../images/contact-bg.png");
+    background-size: cover;
+    color:#fff;
+}
+#contact h2{
+    font-weight: bold;
+}
+#contact h2 span{
+    margin-right: 30px;
+}
+#contact .p-mtb30{
+    margin: 25px 0;
+    line-height: 25px;
+}
+#contact address p{
+    height: 30px;
+}
+#contact address span{
+    margin-right: 10px;
+}
+#contact .form-control {
+    border: none;
+    border-radius: 0;
+    height: 50px;
+    margin-bottom: 20px;
+}
+#contact textarea.form-control{
+    height: auto;
+}
+.btn-contact{
+    background: #40D2B1;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+.btn-contact:hover{
+    background: rgb(44, 142, 120);
+}
+/*footer*/
+footer{
+    font-weight: 400;
+    padding: 20px;
+    text-align: center;
+}
