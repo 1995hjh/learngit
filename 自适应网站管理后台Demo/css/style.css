@@ -1,0 +1,36 @@
+body{
+    font-family: "Microsoft YaHei";
+}
+/*首页*/
+.wh64{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+.panel-td{
+    margin-top: 20px;
+}
+/*用户管理*/
+.page-header {
+    margin-top: 0;
+}
+.page-header h4{
+    margin: 0;
+    font-size: 16px;
+}
+/*用户搜索*/
+.search_form{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+/*标签管理页面*/
+.tagdiv div{
+    margin: 15px;
+}
+/*footer*/
+footer{
+    font-weight: 400;
+    padding: 20px;
+    text-align: center;
+}
