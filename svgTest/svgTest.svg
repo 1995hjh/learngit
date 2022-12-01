@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<g transform="translate(600, 100)" fill="transparent" stroke="black" stroke-width="5">
+		<circle r="50"></circle>
+		<circle r="40"></circle>
+		<circle r="30"></circle>
+		<circle r="20"></circle>
+		<circle r="10"></circle>
+	</g>
+	<g style="cursor:pointer;">
+		<circle cx="60" cy="60" r="50" fill="transparent" stroke="black"></circle>
+		<text x="60" y="68" font-size="20" text-anchor="middle">文字测试</text>
+	</g>
+	<rect width="200" height="200" x="200" y="20" fill="yellow" rx="5"></rect>
+	<line x1="80" y1="80" x2="200" y2="200" stroke="black" stroke-width="5" stroke-opacity="0.2"></line>
+	<image x="50" y="250" width="100" height="100" xlink:href="r2.png" style="border-radius: 50px"></image>
+	<rect width="600" height="600" x="700" y="200" stroke="black" fill="transparent" stroke-width="1"></rect>
+	<g style="cursor:pointer">
+		<line x1="1000" y1="500" x2="800" y2="300" stroke="#ccc" stroke-width="1"></line>
+		<line x1="1000" y1="500" x2="800" y2="300" stroke="transparent" stroke-width="10"></line>
+		<rect x="880" y="380" width="20" height="20" fill="#FDD100" rx="4"></rect>
+		<text x="890" y="396" font-size="16" text-anchor="middle" fill="#adadad">?</text>
+	</g>
+	<g style="cursor:pointer">
+		<image x="950" y="450" width="100" height="100" xlink:href="r1.png" style="border-radius: 50px"/>
+		<text x="1000" y="510" font-size="20" text-anchor="middle" fill="#000">刷卡机</text>
+	</g>
+	<g style="cursor:pointer">
+		<circle cx="772" cy="272" r="40" stroke="#FDD100" fill="transparent"></circle>
+		<text x="772" y="280" font-size="20" text-anchor="middle" fill="#000">暗示</text>
+	</g>
+</svg>

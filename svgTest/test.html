@@ -1,0 +1,77 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>svg练习2</title>
+		<style>
+			#container {
+				width: 100%;
+				height: 100%;
+				background-size: cover;
+				padding: 0;
+				margin: 0;
+			}
+			.full-view {
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="full-view" id="svg-view">
+				<!--
+				<polyline points="200 200 400 200 600 600 100 600" stroke="black" stroke-width="5" fill="none"></polyline>
+				<polygon points="900 200 1100 200 1200 600 700 600" stroke="black" stroke-width="5" fill="none"></polygon>
+				-->
+			</svg>
+		</div>
+	</body>
+	<script>
+		window.onload = function(){
+			var svgEle = document.getElementById("svg-view")
+			var polyline = null;
+			var polylinePoints = null;
+			svgEle.onmousedown = function(e) {
+				if (polyline) {
+					polylinePoints += "," + e.clientX + "," + e.clientY;
+					polyline.setAttribute("points", polylinePoints)
+				} else {
+					polylinePoints = e.clientX + "," + e.clientY;
+					polyline = createTag("polyline", {
+						points: polylinePoints,
+						stroke: "red",
+						"stroke-width": 2,
+						fill: "none"
+					})
+					svgEle.appendChild(polyline)
+				}
+				let tag = createTag("circle", {
+					cx: e.clientX,
+					cy: e.clientY,
+					stroke: "red",
+					"stroke-width": 2,
+					fill: "white",
+					r: 5
+				})
+				svgEle.appendChild(tag)
+			}
+			svgEle.onmousemove = function(e) {
+				let ev = e || window.event
+				if (polyline) {
+					polyline.setAttribute("points", polylinePoints + "," + ev.clientX + "," + ev.clientY)
+				}
+			}
+			svgEle.oncontextmenu = function() {
+				svgEle.onmousemove = null
+				return false;
+			}
+		}
+		function createTag(tagName, attr) {
+			let tag = document.createElementNS("http://www.w3.org/2000/svg", tagName)
+			for (let key in attr) {
+				tag.setAttribute(key, attr[key])
+			}
+			return tag;
+		}
+	</script>
+</html>

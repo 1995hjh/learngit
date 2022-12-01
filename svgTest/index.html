@@ -1,0 +1,268 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>svg练习</title>
+		<style>
+			#container {
+				width: 100%;
+				height: 100%;
+				//background: url("bg.jpeg") 100% 100% no-repeat;
+				background-size: cover;
+			}
+			.full-view {
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<!--线条--> <!--中心圆--> <!--四周圆-->
+			<!--
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="full-view">
+				<g style="cursor:pointer">
+					<line x1="1000" y1="500" x2="800" y2="300" stroke="#ccc" stroke-width="1"></line>
+					<line x1="1000" y1="500" x2="800" y2="300" stroke="transparent" stroke-width="10"></line>
+					<rect x="880" y="380" width="20" height="20" fill="#FDD100" rx="4"></rect>
+					<text x="890" y="396" font-size="16" text-anchor="middle" fill="#adadad">?</text>
+				</g>
+				<g style="cursor:pointer">
+					<image x="950" y="450" width="100" height="100" xlink:href="r1.png" style="border-radius: 50px"/>
+					<text x="1000" y="510" font-size="20" text-anchor="middle" fill="#000">刷卡机</text>
+				</g>
+				<g style="cursor:pointer">
+					<circle cx="772" cy="272" r="40" stroke="#FDD100" fill="transparent"></circle>
+					<text x="772" y="280" font-size="20" text-anchor="middle" fill="#000">暗示</text>
+				</g>
+			</svg>
+			-->
+		</div>
+	</body>
+	<script>
+		var svgNS = "http://www.w3.org/2000/svg";
+		var parent = document.getElementById("container");
+		var centerX = parent.offsetWidth / 2;
+		var centerY = parent.offsetHeight / 2;
+		var data = {
+			centerNode: {
+				text: '刷卡机'
+			},
+			otherNode: [
+				/*{
+					cx: 772,
+					cy: 280,
+					r: 30,
+					text: "暗示"
+				},
+				{
+					cx: 1300,
+					cy: 680,
+					r: 45,
+					text: "数据"
+				},
+				{
+					cx: 1000,
+					cy: 200,
+					r: 40,
+					text: "可视"
+				},
+				{
+					cx: 400,
+					cy: 780,
+					r: 35,
+					text: "升级"
+				}*/
+			]
+		}
+		var divideN = 9;
+		var angleNum = 360 / divideN;
+		/*
+		var centenR1 = 200;
+		for (let i = 0; i < divideN; i++) {
+			data.otherNode.push({
+				cx: centerX + centenR1 * Math.cos(angleNum * i * Math.PI / 180),
+				cy: centerY + centenR1 * Math.sin(angleNum * i * Math.PI / 180),
+				r: Math.round(Math.random()*15+30),
+				text: (i+1)
+			})
+		}*/
+		var centerRArr = [{
+			r: 200,
+			divideN: Math.round(Math.random()*10 + 5)
+		},{
+			r: 350,
+			divideN: Math.round(Math.random()*10 + 5)//第二圈半径是350，分为7个
+		},{
+			r: 420,
+			divideN: Math.round(Math.random()*10 + 5)//第二圈半径是350，分为7个
+		}]
+		for (let i = 0; i < centerRArr.length; i++) {
+			for (let j = 0; j < centerRArr[i].divideN; j++) {
+				data.otherNode.push({
+					cx: centerX + centerRArr[i].r * Math.cos( 360 / centerRArr[i].divideN * j * Math.PI / 180),
+					cy: centerY + centerRArr[i].r * Math.sin(360 / centerRArr[i].divideN * j * Math.PI / 180),
+					r: Math.round(Math.random()*15+30),
+					text: (i+1) + "-" + (j+1)
+				})
+			}
+		}
+		window.onload = function() {
+			/* 方式一： 直接添加
+			var svgNS = "http://www.w3.org/2000/svg";
+			var oSvg = document.createElementNS(svgNS, "svg");
+			oSvg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+			oSvg.setAttribute("xmlns:xlink", "http://www.w3.org/1999/xlink");
+			oSvg.setAttribute("class", "full-view");
+			document.getElementById("container").appendChild(oSvg)
+			*/
+			//方式二： 通过提炼公共的创建标签的方法添加
+			/*
+			var oSvg = createTag("svg", {"xmlns": "http://www.w3.org/2000/svg","xmlns:xlink":"http://www.w3.org/1999/xlink","class":"full-view"})
+			var g = createTag("g", {"style": "cursor:pointer"})
+			var circle = createTag("circle", {"cx": "950","cy":"450","r":"100","fill": "transparent", stroke: "#FDD100"})
+			var text = createTag("text", {"x":"950","y":"462","font-size":"20","text-anchor":"middle","fill":"#000"})
+			oSvg.appendChild(g)
+			g.appendChild(circle)
+			g.appendChild(text)
+			text.innerHTML = "刷卡机"
+			parent.appendChild(oSvg)
+			*/
+			
+			//方式三：数据隔离
+			addTag();
+			var aroundCircles = document.getElementsByClassName("around-circle-area")
+			var lines = document.getElementsByClassName("lines-area")
+			for (let i = 0; i < aroundCircles.length; i++) {
+				aroundCircles[i].onmouseenter = function() {
+					let originR = Number(aroundCircles[i].children[0].getAttribute("r"))
+					setAttributeObjs(aroundCircles[i].children[0], {
+						originR: originR,
+						r: Number(aroundCircles[i].children[0].getAttribute("r")) + 15,
+						style: "transition: r .5s"
+					})
+					setAttributeObjs(aroundCircles[i].children[1], {
+						"font-size": 24,
+						style: "transition: font-size .5s"
+					})
+					setAttributeObjs(aroundCircles[i].previousElementSibling.children[0], {
+						"stroke": "blue",
+						"stroke-width": "2",
+						style: "transition: font-size .5s"
+					})
+					setAttributeObjs(aroundCircles[i].previousElementSibling.children[2], {
+						fill: "blue",
+						style: "transition: fill .5s"
+					})
+				}
+				aroundCircles[i].onmouseleave = function() {
+					setAttributeObjs(aroundCircles[i].children[0], {
+						r: Number(aroundCircles[i].children[0].getAttribute("originR"))
+					})
+					setAttributeObjs(aroundCircles[i].children[1], {
+						"font-size": 20,
+						style: "transition: font-size .5s"
+					})
+					setAttributeObjs(aroundCircles[i].previousElementSibling.children[0], {
+						"stroke": "#765959",
+						"stroke-width": "1",
+						style: "transition: font-size .5s"
+					})
+					setAttributeObjs(aroundCircles[i].previousElementSibling.children[2], {
+						fill: "#FDD100",
+						style: "transition: fill .5s"
+					})
+				}
+				lines[i].onmouseenter = function() {
+					setAttributeObjs(lines[i].children[0], {
+						"stroke": "blue",
+						"stroke-width": "2",
+						style: "transition: font-size .5s"
+					})
+					setAttributeObjs(lines[i].children[2], {
+						fill: "blue",
+						style: "transition: fill .5s"
+					})
+					let originR = Number(lines[i].nextElementSibling.children[0].getAttribute("r"))
+					setAttributeObjs(lines[i].nextElementSibling.children[0], {
+						originR: originR,
+						r: Number(lines[i].nextElementSibling.children[0].getAttribute("r")) + 15,
+						style: "transition: r .5s"
+					})
+					setAttributeObjs(lines[i].nextElementSibling.children[1], {
+						"font-size": 24,
+						style: "transition: font-size .5s"
+					})
+				}
+				lines[i].onmouseleave = function() {
+					setAttributeObjs(lines[i].children[0], {
+						"stroke": "#765959",
+						"stroke-width": "1",
+						style: "transition: font-size .5s"
+					})
+					setAttributeObjs(lines[i].children[2], {
+						fill: "#FDD100",
+						style: "transition: fill .5s"
+					})
+					setAttributeObjs(lines[i].nextElementSibling.children[0], {
+						r: Number(lines[i].nextElementSibling.children[0].getAttribute("originR"))
+					})
+					setAttributeObjs(lines[i].nextElementSibling.children[1], {
+						"font-size": 20,
+						style: "transition: font-size .5s"
+					})
+				}
+			}
+		}
+		function addTag() {
+			var oSvg = createTag("svg", {"xmlns": "http://www.w3.org/2000/svg","xmlns:xlink":"http://www.w3.org/1999/xlink","class":"full-view"})
+			for (let i = 0; i < data.otherNode.length; i++) {
+				addAroundTag(data.otherNode[i], oSvg)
+			}
+			addCenterNode(oSvg)
+			parent.appendChild(oSvg)
+		}
+		function createTag(tag, objAttr) {
+			var tag = document.createElementNS(svgNS, tag);
+			for (let key in objAttr) {
+				tag.setAttribute(key, objAttr[key]);
+			}
+			return tag;
+		}
+		function addCenterNode(oSvg) {
+			var g = createTag("g", {"style": "cursor:pointer", "class": "center-circle-area"})
+			var circle = createTag("circle", {"cx": centerX,"cy":centerY,"r":50,"fill": "#fff", stroke: "red"})
+			var text = createTag("text", {"x":centerX,"y":centerY + 8,"font-size":"20","text-anchor":"middle","fill":"#000"})
+			text.innerHTML = data.centerNode.text
+			g.appendChild(circle)
+			g.appendChild(text)
+			oSvg.appendChild(g)
+		}
+		function addAroundTag(otherArr, oSvg) {
+			var g = createTag("g", {"style": "cursor:pointer", "class": "lines-area"})
+			var line1 = createTag("line", {x1: otherArr.cx,y1:otherArr.cy,x2:centerX,y2:centerY,stroke:"#765959","stroke-width":"1"})
+			var line2 = createTag("line", {x1: otherArr.cx,y1:otherArr.cy,x2:centerX,y2:centerY,stroke:"transparent","stroke-width":"10"})
+			var rect1 = createTag("rect", {x:(otherArr.cx + centerX)/2 - 14,y:(otherArr.cy + centerY)/2 - 14,width:"20",height:"20",fill:"#FDD100",rx:"4"})
+			var text1 = createTag("text", {x:(otherArr.cx + centerX)/2 - 4,y:(otherArr.cy + centerY)/2 + 2,"font-size":"16","text-anchor":"middle",fill:"#adadad"})
+			text1.innerHTML = "?"
+			g.appendChild(line1)
+			g.appendChild(line2)
+			g.appendChild(rect1)
+			g.appendChild(text1)
+			oSvg.appendChild(g)
+				
+			var g1 = createTag("g", {"style": "cursor:pointer", "class": "around-circle-area"})
+			var circle = createTag("circle", {"cx": otherArr.cx,"cy": otherArr.cy,"r":otherArr.r,"fill": "#fff", stroke: "red"})
+			var text = createTag("text", {"x":otherArr.cx,"y": otherArr.cy + 8,"font-size":"20","text-anchor":"middle","fill":"#000"})
+			text.innerHTML = otherArr.text
+			g1.appendChild(circle)
+			g1.appendChild(text)
+			oSvg.appendChild(g1)	
+		}
+		function setAttributeObjs(obj, attrs) {
+			for(let key in attrs) {
+				obj.setAttribute(key, attrs[key])
+			}
+		}
+		
+	</script>
+</html>
