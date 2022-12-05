@@ -1,0 +1,119 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>path练习</title>
+		<style>
+			#container {
+				width: 100%;
+				height: 100%;
+				background-size: cover;
+				padding: 0;
+				margin: 0;
+			}
+			.full-view {
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="full-view" id="svg-view">
+				<rect x="1000" y="100" width="50" height="100" fill="orange">
+					<animate attributeName="width" dur="2" from="50" to="200"></animate>
+				</rect>
+				<!--
+					M:起始坐标点  L：后续坐标点  H：水平坐标  V：垂直坐标  A：弧形  Z：收尾闭合
+					A有7个参数，第一个x半径，第二个y半径，第三个角度，第四个弧长(0小1大)，第五个方向(0逆1顺)，第六个终点x坐标，第七个终点y坐标
+				-->
+				<path d="M100,100H200V200L100, 200Z" stroke="black" fill="none" stroke-width="1"></path>
+				<path d="M300,100L350,95,375,50,400,95,450,100,410,130,425,190,377,150,330,190,345,130Z" stroke="#E7B912" fill="yellow" stroke-width="1"></path>
+				<path d="M600,200A170,170,0,0,1,900,200L850,280A120,120,0,0,0,655,280Z" stroke="black" fill="#00AEEC" stroke-width="1"></path>
+			</svg>
+		</div>
+	</body>
+	<script src="./jquery.min.js"></script>
+	<script>
+		window.onload = function(){
+		
+			var arrRate = [16.05, 15.40, 11.72, 14.95, 23.61,17.10];
+			var angle = 360;
+			var centerX = 800;
+			var centerY = 400;
+			var innerR = 70;
+			var outerR = 110;
+			
+			var colors = ['#78E7E6', '#51D1CC', '#39BDAE', '#7089CE', '#FA7A53', '#F6B61D']
+			
+			function drawChart(pos) {
+				var sumAngle = 0;
+				var outerXY = [{
+					x: centerX + outerR,
+					y: centerY
+				}];
+				var innerXY = [{
+					x: centerX + innerR,
+					y: centerY
+				}];
+				for (let i = 0; i < arrRate.length; i++) {
+					var perAngle = arrRate[i] / 100 * angle;
+					sumAngle += perAngle;
+					if (i === arrRate.length - 1) {
+						sumAngle = 360;
+					}
+					var outerX = outerR * Math.cos(sumAngle * pos * Math.PI / 180) + centerX;
+					var outerY = outerR * Math.sin(sumAngle * pos * Math.PI / 180) + centerY;
+					var innerX = innerR * Math.cos(sumAngle * pos * Math.PI / 180) + centerX;
+					var innerY = innerR * Math.sin(sumAngle * pos * Math.PI / 180) + centerY;
+					outerXY.push({
+						x: outerX,
+						y: outerY
+					})
+					innerXY.push({
+						x: innerX,
+						y: innerY
+					})
+				}
+				for (let i = 0; i < outerXY.length; i++) {
+					if (i === outerXY.length - 1) {
+						break;
+					}
+					var tag = createTag("path", {
+						fill: colors[i],
+						d: "M" + outerXY[i].x + "," + outerXY[i].y + "A" + outerR + "," + outerR + ",0,0,1," + outerXY[i+1].x + "," + outerXY[i+1].y + "L" + innerXY[i+1].x + "," + innerXY[i+1].y +
+						"A" + innerR + "," + innerR +  ",0,0,0," + innerXY[i].x + "," + innerXY[i].y
+					})
+					document.getElementById("svg-view").appendChild(tag)
+				}
+			}
+			
+			function createTag(tagName, attr) {
+				var tag = document.createElementNS("http://www.w3.org/2000/svg", tagName)
+				for (let key in attr) {
+					tag.setAttribute(key, attr[key])
+				}
+				return tag
+			}
+			
+			//drawChart(1);
+			/*
+			for (let i = 0; i < arrRate.length; i++) {
+				var tag = createTag("path", {
+					fill: colors[i]
+				})
+				document.getElementById("svg-view").appendChild(tag)
+			}*/
+			
+			$("#container").animate({
+				move: 'auto'
+			},{
+				duration: 1000,
+				easing: 'swing',
+				step: function(a, b) {
+					drawChart(b.pos)
+				}
+			})
+			
+		}
+	</script>
+</html>

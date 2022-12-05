@@ -1,7 +1,7 @@
 <!DOCTYPE>
 <html>
 	<head>
-		<title>svg练习2</title>
+		<title>polyline&polygon练习</title>
 		<style>
 			#container {
 				width: 100%;
@@ -58,11 +58,17 @@
 			svgEle.onmousemove = function(e) {
 				let ev = e || window.event
 				if (polyline) {
+				
+					//polylinePoints += "," + ev.clientX + "," + ev.clientY
+					//polyline.setAttribute("points", polylinePoints)
+					
 					polyline.setAttribute("points", polylinePoints + "," + ev.clientX + "," + ev.clientY)
 				}
 			}
 			svgEle.oncontextmenu = function() {
-				svgEle.onmousemove = null
+				//svgEle.onmousemove = null
+				polyline = null;
+				polylinePoints = null;
 				return false;
 			}
 		}
