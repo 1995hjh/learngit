@@ -1,0 +1,243 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>电压图示例</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			#container {
+				width: 100%;
+				height: 100%;
+				background: #000;
+			}
+			.full-view {
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="full-view" id="svg">
+				
+			</svg>
+		</div>
+	</body>
+	<script>
+		var svgNS = "http://www.w3.org/2000/svg";
+		var svgLink = "http://www.w3.org/1999/xlink";
+		var svgObj = document.getElementById("svg")
+		var point1 = [300, 50]//最上方横线起始点坐标
+		var point2 = [1200, 50]//最上方横线终点坐标
+		var baseWidth = point2[0] - point1[0];//最上方横线宽度
+		var baseHeight = 100;//竖线高度
+		var rectWidth = 70;//矩形宽度
+		var rectHeight = 80;//矩形高度
+		var fontSize = 14;//文本大小
+		var data = [{
+			leftText: '有功功率<br/>无功功率',
+			rightText: '-3.3kW<br/>0.8kVar',
+			bottomText: '',
+			rect: false,
+			image: './v1.png',
+			children: [{
+				leftText: 'SOC<br/>堆电压<br/>堆电流',
+				rightText: '100%<br/>755.1V<br/>-6.6A',
+				bottomText: '',
+				rect: true,
+				image: '',
+			}]
+		},{
+			leftText: '有功功率',
+			rightText: '-0.07kW',
+			bottomText: '光伏逆变器',
+			rect: false,
+			image: './v1.png',
+			children: []
+		}]
+		var wheelRate = 1;
+		window.onload = function() {
+			draw()
+			window.addEventListener("wheel",function(e){
+				 let evt = e || window.event;
+				 evt.preventDefault();
+				 if( evt.deltaY > 0 ){
+					wheelRate -= 0.1;
+				 } else {
+					wheelRate += 0.1;
+				 }
+				 if (wheelRate < 0 || wheelRate === 0) {
+					wheelRate = 0.1;
+				 }
+				 //svgObj.style.transform = 'scale(' + wheelRate + ')'
+			},{ passive: false });
+		}
+		function draw() {
+			//添加顶层的横线
+			var line1 = createTag("line", {
+				x1: point1[0],
+				y1: point1[1],
+				x2: point2[0],
+				y2: point2[1],
+				stroke: '#F10000',
+				"stroke-width": 1
+			})
+			svgObj.appendChild(line1)
+			for (let i = 0; i < data.length; i++) {
+				(() => {
+					//添加竖线
+					var x1 = baseWidth / (data.length + 1) * (i + 1) + point1[0];
+					var line2 = createTag("line", {
+						x1: x1,
+						y1: point1[1],
+						x2: x1,
+						y2: point1[1] + baseHeight,
+						stroke: '#F10000',
+						"stroke-width": 1
+					})
+					svgObj.appendChild(line2)
+					//添加中心形状
+					var objx1 = 0;
+					if (data[i].image) {
+						getImgTip(data[i].image).then((size) => {
+							objx1 = x1 - size.width / 2;
+							var imageObj = createTag("image", {
+								x: objx1,
+								y: point1[1] + baseHeight,
+								width: size.width,
+								height: size.height,
+								"xlink:href": data[i].image
+							})
+							svgObj.appendChild(imageObj)
+							this.addTextTag(i, objx1, x1, size)
+							if (data[i].children && data[i].children.length > 0) {
+								this.addChildrenTags(i)
+							}
+						})
+					} else {
+						objx1 = x1 - rectWidth / 2;
+						var rectObj = createTag("rect", {
+							x: objx1,
+							y: point1[1] + baseHeight,
+							width: rectWidth,
+							height: rectHeight,
+							fill: "#1A6312",
+							stroke: "#AEF116",
+							"stroke-width": 2
+						})
+						svgObj.appendChild(rectObj)
+						this.addTextTag(i, objx1, x1)
+						if (data[i].children && data[i].children.length > 0) {
+							this.addChildrenTags(i)
+						}
+					}
+				})(i)
+			}
+		}
+		function addChildrenTags(i) {
+			return;
+			var length = data[i].children.length;
+			if (length === 1) {
+				var line = createTag("line", {
+					x1: x1,
+					y1: point1[1],
+					x2: x1,
+					y2: point1[1] + baseHeight,
+					stroke: '#F10000',
+					"stroke-width": 1
+				})
+				svgObj.appendChild(line2)
+			}
+		}
+		function addTextTag(i, objx1, x1, size) {
+			//添加左方文字
+			let spanArrs = data[i].leftText.split("<br/>");
+			var leftTextObj = createTag("text", {
+				fill: "white"
+			})
+			let textWidth = 0;
+			for (let j = 0; j < spanArrs.length; j++) {
+				textWidth = spanArrs[j].length * fontSize
+				var spanObj = createTag("tspan", {
+					x: (data[i].image ? objx1: (objx1 - 2)) - 5 - textWidth,
+					y: point1[1] + baseHeight + (j + 1) * (fontSize + 5),
+					"font-size": fontSize
+				})
+				spanObj.innerHTML = spanArrs[j]
+				leftTextObj.appendChild(spanObj)
+			}
+			svgObj.appendChild(leftTextObj)
+			//添加右方文字
+			let spanArrs2 = data[i].rightText.split("<br/>");
+			var rightTextObj = createTag("text", {
+				fill: "#10A3A3"
+			})
+			for (let j = 0; j < spanArrs2.length; j++) {
+				var spanObj = createTag("tspan", {
+					x: (data[i].image ? (x1 - objx1 + x1): (x1 - objx1 + x1 + 2)) + 5,
+					y: point1[1] + baseHeight + (j + 1) * (fontSize + 5),
+					"font-size": fontSize
+				})
+				spanObj.innerHTML = spanArrs2[j]
+				rightTextObj.appendChild(spanObj)
+			}
+			svgObj.appendChild(rightTextObj)
+			//添加下方文字
+			let spanArrs3 = data[i].bottomText.split("<br/>");
+			var bottomTextObj = createTag("text", {
+				fill: "white"
+			})
+			for (let j = 0; j < spanArrs3.length; j++) {
+				var spanObj = createTag("tspan", {
+					x: data[i].image ? objx1: (objx1 - 2),
+					y: data[i].image ? (point1[1] + baseHeight + size.height + (fontSize + 2) * (j + 1)) : (point1[1] + baseHeight + rectHeight + 4 + (fontSize + 2) * (j + 1)),
+					"font-size": fontSize
+				})
+				spanObj.innerHTML = spanArrs3[j]
+				bottomTextObj.appendChild(spanObj)
+			}
+			svgObj.appendChild(bottomTextObj)
+		}
+		function createTag(tag, objAttr) {
+			var tag = document.createElementNS(svgNS, tag);
+			for (let key in objAttr) {
+				if (key === 'xlink:href') {
+					tag.setAttributeNS(svgLink, key, objAttr[key]);
+				} else {
+					tag.setAttribute(key, objAttr[key]);
+				}
+			}
+			return tag;
+		}
+		function setAttributeObjs(obj, attrs) {
+			for(let key in attrs) {
+				obj.setAttribute(key, attrs[key])
+			}
+		}
+		//通过图片地址，获取图片尺寸
+		function getImgTip(bdImgBase) {
+			return (async () => {
+				let size = await getImageSize(bdImgBase);
+				return size;
+			})();
+		}
+		//参数为二进制图片流
+		function getImageSize(url) {
+			return new Promise(function (resolve, reject) {
+				let image = new Image();
+				image.onload = function () {
+					resolve({
+						width: image.width,
+						height: image.height
+					});
+				};
+				image.onerror = function () {
+					reject(new Error('error'));
+				};
+				image.src = url;
+			});
+		}
+	</script>
+</html>
