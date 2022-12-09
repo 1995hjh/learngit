@@ -31,7 +31,7 @@
 		var svgObj = document.getElementById("svg")
 		var point1 = [300, 50]//最上方横线起始点坐标
 		var point2 = [1200, 50]//最上方横线终点坐标
-		var baseWidth = point2[0] - point1[0];//最上方横线宽度
+		var parentWidth = point2[0] - point1[0];//最上方横线宽度
 		var baseHeight = 100;//竖线高度
 		var rectWidth = 70;//矩形宽度
 		var rectHeight = 80;//矩形高度
@@ -42,12 +42,35 @@
 			bottomText: '',
 			rect: false,
 			image: './v1.png',
+			level: 1,
 			children: [{
 				leftText: 'SOC<br/>堆电压<br/>堆电流',
 				rightText: '100%<br/>755.1V<br/>-6.6A',
 				bottomText: '',
 				rect: true,
 				image: '',
+				level: 2
+			},{
+				leftText: 'SOC<br/>堆电压<br/>堆电流',
+				rightText: '100%<br/>755.1V<br/>-6.6A',
+				bottomText: '',
+				rect: true,
+				image: '',
+				level: 2
+			},{
+				leftText: 'SOC<br/>堆电压<br/>堆电流',
+				rightText: '100%<br/>755.1V<br/>-6.6A',
+				bottomText: '',
+				rect: true,
+				image: '',
+				level: 2
+			},{
+				leftText: 'SOC<br/>堆电压<br/>堆电流',
+				rightText: '100%<br/>755.1V<br/>-6.6A',
+				bottomText: '',
+				rect: true,
+				image: '',
+				level: 2
 			}]
 		},{
 			leftText: '有功功率',
@@ -55,7 +78,22 @@
 			bottomText: '光伏逆变器',
 			rect: false,
 			image: './v1.png',
-			children: []
+			level: 1,
+			children: [{
+				leftText: 'SOC<br/>堆电压<br/>堆电流',
+				rightText: '100%<br/>755.1V<br/>-6.6A',
+				bottomText: '',
+				rect: true,
+				image: '',
+				level: 2
+			},{
+				leftText: 'SOC<br/>堆电压<br/>堆电流',
+				rightText: '100%<br/>755.1V<br/>-6.6A',
+				bottomText: '',
+				rect: false,
+				image: 'r1.png',
+				level: 2
+			}]
 		}]
 		var wheelRate = 1;
 		window.onload = function() {
@@ -71,7 +109,7 @@
 				 if (wheelRate < 0 || wheelRate === 0) {
 					wheelRate = 0.1;
 				 }
-				 //svgObj.style.transform = 'scale(' + wheelRate + ')'
+				 svgObj.style.transform = 'scale(' + wheelRate + ')'
 			},{ passive: false });
 		}
 		function draw() {
@@ -88,7 +126,7 @@
 			for (let i = 0; i < data.length; i++) {
 				(() => {
 					//添加竖线
-					var x1 = baseWidth / (data.length + 1) * (i + 1) + point1[0];
+					var x1 = parentWidth / (data.length + 1) * (i + 1) + point1[0];
 					var line2 = createTag("line", {
 						x1: x1,
 						y1: point1[1],
@@ -99,49 +137,76 @@
 					})
 					svgObj.appendChild(line2)
 					//添加中心形状
-					var objx1 = 0;
-					if (data[i].image) {
-						getImgTip(data[i].image).then((size) => {
-							objx1 = x1 - size.width / 2;
-							var imageObj = createTag("image", {
-								x: objx1,
-								y: point1[1] + baseHeight,
-								width: size.width,
-								height: size.height,
-								"xlink:href": data[i].image
-							})
-							svgObj.appendChild(imageObj)
-							this.addTextTag(i, objx1, x1, size)
-							if (data[i].children && data[i].children.length > 0) {
-								this.addChildrenTags(i)
-							}
-						})
-					} else {
-						objx1 = x1 - rectWidth / 2;
-						var rectObj = createTag("rect", {
-							x: objx1,
-							y: point1[1] + baseHeight,
-							width: rectWidth,
-							height: rectHeight,
-							fill: "#1A6312",
-							stroke: "#AEF116",
-							"stroke-width": 2
-						})
-						svgObj.appendChild(rectObj)
-						this.addTextTag(i, objx1, x1)
-						if (data[i].children && data[i].children.length > 0) {
-							this.addChildrenTags(i)
-						}
-					}
+					drawNodes(data,i,x1);
 				})(i)
 			}
 		}
-		function addChildrenTags(i) {
-			return;
-			var length = data[i].children.length;
-			if (length === 1) {
+		function drawNodes(data,i, x1) {//x1是物体上面中心点坐标
+			var objx1 = 0;
+			if (data[i].image) {
+				getImgTip(data[i].image).then((size) => {
+					objx1 = x1 - size.width / 2;
+					var imageObj = createTag("image", {
+						x: objx1,
+						y: point1[1] + baseHeight * data[i].level,
+						width: size.width,
+						height: size.height,
+						"xlink:href": data[i].image
+					})
+					svgObj.appendChild(imageObj)
+					this.addTextTag(i, objx1, x1, size)
+					if (data[i].children && data[i].children.length > 0) {
+						this.addChildrenTags(i, objx1, x1, size)
+					}
+				})
+			} else {
+				objx1 = x1 - rectWidth / 2;
+				var rectObj = createTag("rect", {
+					x: objx1,
+					y: point1[1] + baseHeight * data[i].level,
+					width: rectWidth,
+					height: rectHeight,
+					fill: "#1A6312",
+					stroke: "#AEF116",
+					"stroke-width": 2
+				})
+				svgObj.appendChild(rectObj)
+				//this.addTextTag(i, objx1, x1)
+				if (data[i].children && data[i].children.length > 0) {
+					this.addChildrenTags(i, objx1, x1)
+				}
+			}
+		}
+		function addChildrenTags(i, objx1, x1, size) {//i代表下标，objx1代表第二级的物体左上角的横坐标，x1代表竖线的横坐标
+			if (data[i].children.length % 2 === 0) {//偶数
+				var startY = point1[1] + baseHeight + (size && size.height || rectHeight);
+				var pointsLStart = x1 + "," + startY + " " + x1 + "," + (startY + baseHeight / 2);
+				var pointsL = pointsLStart;
+				var pointsR = x1 + "," + (startY + baseHeight / 2) + " ";
+				svgObj.appendChild(createTag("polyline", {
+					points: pointsL,
+					stroke: '#F10000',
+					"stroke-width": 1
+				}));
+				for (let a = 0; a < data[i].children.length / 2;a++) {
+					svgObj.appendChild(createTag("polyline", {
+						points: (x1 - a * rectWidth) + "," + (startY + baseHeight / 2) +  " " + (x1 - (a + 1) * rectWidth) + "," + (startY + baseHeight / 2) + " " + (x1 - (a + 1) * rectWidth) + "," + (startY + baseHeight),
+						stroke: '#F10000',
+						"stroke-width": 1
+					}))
+					svgObj.appendChild(createTag("polyline", {
+						points: (x1 + a * rectWidth) + "," + (startY + baseHeight / 2) +  " " + (x1 + (a + 1) * rectWidth) + "," + (startY + baseHeight / 2) + " " + (x1 + (a + 1) * rectWidth) + "," + (startY + baseHeight),
+						stroke: '#F10000',
+						"stroke-width": 1
+					}))
+					//drawNodes(data[i].children, a, x1 - (a + 1) * rectWidth)
+				}
+				//for (let a = 0; a < data[i].children;a++) {
+					//drawNodes(data[i].children, a, x1 - (a + 1) * rectWidth)
+				//}
+			} else {//奇数
 				var line = createTag("line", {
-					x1: x1,
+					x1: objx1,
 					y1: point1[1],
 					x2: x1,
 					y2: point1[1] + baseHeight,
